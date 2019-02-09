@@ -5,6 +5,14 @@
     min-height: 100vh;
 }
 
+/* properties for every section */
+section{
+    /* according to mockup each section ought to have height and width of a screen */
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+/* navbar styling */
 .navbar{
     width: 100%;
     display: flex;
@@ -44,6 +52,8 @@ a:visited{
     color: #000;
 }
 
+
+/* footer styling */
 .footer{
     width: 100%;
     position: absolute;
