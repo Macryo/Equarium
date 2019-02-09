@@ -8,11 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
 module: {
-  rules: [{test: /\.js$/,
-use: {
-            loader: 'babel-loader',
-            options: {
-            presets: ['@babel/preset-env']}} }]
+	 rules: [{test: /\.js$/,exclude: /node_modules/, loader: "babel-loader"}]
      },
      stats: {
          colors: true
