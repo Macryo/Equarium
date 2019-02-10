@@ -8,6 +8,7 @@
 }
 
 #slider{
+    border-top: var(--light-green) 0.3vh solid;
     width:100%;
     height: 100vh;
     position:relative;
@@ -22,8 +23,8 @@
 }
 .slider_btn{
     position: absolute;
-    width: 5rem;
-    height: 5rem;
+    width: 50px;
+    height: 50px;
     background: transparent;
     border: none;
     font-size:  40px;
@@ -32,18 +33,22 @@
 }
 
 #slider #slider_text{
-    color:white;
+    color: #fff;
     position: relative;
     display: flex;
     justify-content: center;
     top: 50%;
     font-family: "Oswald", "sans serif";
-    font-size: 5rem;
+    font-size: 6em;
 }
 .slider_btn:active {
     background-color: var(--light-green);
     border: none;
-    border-radius: 30%;
+    border-radius: 40%;
+}
+.slider_btn:hover {
+    background-color: var(--light-green);
+    border-radius: 40%;
 }
 
 .slider_btn:focus {
@@ -52,12 +57,89 @@
 
 #slider_btn_left{
     top:50%;
-    left:0%;
+    left:3%;
 }
 
 #slider_btn_right {
     top: 50%;
-    right: 0%;
+    right: 3%;
 }
+
+/* old phones */
+
+@media (min-width: 120px) and (max-width: 319px) {
+
+    #slider {
+        height: 80vh;
+    }
+
+    #slider #slider_text {
+        color: white;
+        font-size: 1em;
+    }
+
+    .slider_btn {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: var(--light-green);
+        border: none;
+        font-size: 20px;
+        color: white;
+        z-index: 1;
+        border-radius: 40%;
+    }
+
+}
+
+/* mobiles CSS */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+#slider{
+    height: 80vh;
+}
+
+#slider #slider_text {
+    color: white;
+    font-size: 1.5em;
+    
+}
+.slider_btn {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--light-green);
+    border: none;
+    font-size: 15px;
+    color: white;
+    z-index: 1;
+    border-radius: 40%;
+}
+}
+
+/* small tablets / landscape mobile */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  #slider #slider_text {
+      color: white;
+      font-size: 3em;
+  }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  #slider #slider_text {
+      color: white;
+      font-size: 2.5em;
+  }
+
+}
+
+
+
 
 
