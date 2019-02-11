@@ -67,6 +67,27 @@
     font-size: var(--font-size-l);
 }
 
+/* slider dotted menu  */
+
+#slider_menu{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 80%;
+    
+}
+
+.slider_dot{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: var(--light-green);
+    margin: 10px;
+}
+
 /* old phones */
 
 @media (min-width: 120px) and (max-width: 319px) {
@@ -96,12 +117,12 @@
 }
 
 #slider #slider_text {  
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-s);
 }
 .slider_btn_dim {
-    width: var(--font-size-m);
-    height: var(--font-size-m);
-    font-size: var(--font-size-m);
+    width: var(--font-size-s);
+    height: var(--font-size-s);
+    font-size: var(--font-size-s);
 }
 
 }
