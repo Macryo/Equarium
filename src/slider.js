@@ -1,21 +1,45 @@
-const BgUrls = ["url('../Images/Slider_placeholder/slider1.jpg')",
-"url('../Images/Slider_placeholder/slider.jpeg')",
-"url('../Images/Slider_placeholder/slider2.jpg')"]
+var slideIndex = 1;
+var sliderTimeout;
+showSlides(slideIndex);
 
-const slider = document.getElementById('slider');
-
-function changeBg1(){
-    slider.style.backgroundImage = BgUrls[0]
+function changeSlide(n) {
+    if (sliderTimeout !== undefined) {
+        clearTimeout(sliderTimeout);
+    }
+    plusSlides(n);
 }
 
-function changeBg2() {
-    slider.style.backgroundImage = BgUrls[1]
+function plusSlides(n) {
+    showSlides(slideIndex += n);
 }
 
-function changeBg3() {
-    slider.style.backgroundImage = BgUrls[2]
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+
 }
 
 
-
-module.exports = {changeBg1, changeBg2, changeBg3};
+module.exports = {
+    changeSlide,
+    currentSlide,
+};

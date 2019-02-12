@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import {changeBg1, changeBg2, changeBg3} from './slider';
+import {changeSlide, currentSlide} from './slider';
 function component() {
   let element = document.createElement('div');
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
@@ -9,6 +9,11 @@ function component() {
 document.body.appendChild(component());
 
 // slider functionality
-document.getElementById('slider_dot_1').addEventListener('click', changeBg1);
-document.getElementById('slider_dot_2').addEventListener('click', changeBg2);
-document.getElementById('slider_dot_3').addEventListener('click', changeBg3);
+document.querySelector('.prev').addEventListener('click', function(){changeSlide(-1)});
+document.querySelector('.next').addEventListener('click', function(){changeSlide(1)});
+document.querySelector('#dot1').addEventListener('click', function(){currentSlide(1)});
+document.querySelector('#dot2').addEventListener('click', function(){currentSlide(2)});
+document.querySelector('#dot3').addEventListener('click', function(){currentSlide(3)});
+// slider functionality
+
+

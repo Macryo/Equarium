@@ -17285,9 +17285,21 @@ function component() {
 
 document.body.appendChild(component()); // slider functionality
 
-document.getElementById('slider_dot_1').addEventListener('click', _slider__WEBPACK_IMPORTED_MODULE_1__["changeBg1"]);
-document.getElementById('slider_dot_2').addEventListener('click', _slider__WEBPACK_IMPORTED_MODULE_1__["changeBg2"]);
-document.getElementById('slider_dot_3').addEventListener('click', _slider__WEBPACK_IMPORTED_MODULE_1__["changeBg3"]);
+document.querySelector('.prev').addEventListener('click', function () {
+  Object(_slider__WEBPACK_IMPORTED_MODULE_1__["changeSlide"])(-1);
+});
+document.querySelector('.next').addEventListener('click', function () {
+  Object(_slider__WEBPACK_IMPORTED_MODULE_1__["changeSlide"])(1);
+});
+document.querySelector('#dot1').addEventListener('click', function () {
+  Object(_slider__WEBPACK_IMPORTED_MODULE_1__["currentSlide"])(1);
+});
+document.querySelector('#dot2').addEventListener('click', function () {
+  Object(_slider__WEBPACK_IMPORTED_MODULE_1__["currentSlide"])(2);
+});
+document.querySelector('#dot3').addEventListener('click', function () {
+  Object(_slider__WEBPACK_IMPORTED_MODULE_1__["currentSlide"])(3);
+}); // slider functionality
 
 /***/ }),
 
@@ -17298,25 +17310,54 @@ document.getElementById('slider_dot_3').addEventListener('click', _slider__WEBPA
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var BgUrls = ["url('../Images/Slider_placeholder/slider1.jpg')", "url('../Images/Slider_placeholder/slider.jpeg')", "url('../Images/Slider_placeholder/slider2.jpg')"];
-var slider = document.getElementById('slider');
+var slideIndex = 1;
+var sliderTimeout;
+showSlides(slideIndex);
 
-function changeBg1() {
-  slider.style.backgroundImage = BgUrls[0];
+function changeSlide(n) {
+  if (sliderTimeout !== undefined) {
+    clearTimeout(sliderTimeout);
+  }
+
+  plusSlides(n);
 }
 
-function changeBg2() {
-  slider.style.backgroundImage = BgUrls[1];
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-function changeBg3() {
-  slider.style.backgroundImage = BgUrls[2];
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
 
 module.exports = {
-  changeBg1: changeBg1,
-  changeBg2: changeBg2,
-  changeBg3: changeBg3
+  changeSlide: changeSlide,
+  currentSlide: currentSlide
 };
 
 /***/ })
