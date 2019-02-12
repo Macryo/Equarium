@@ -17353,6 +17353,9 @@ function showSlides(n) {
 
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
+  sliderTimeout = setTimeout(function () {
+    plusSlides(1);
+  }, 8000); // Change image every 8 seconds
 }
 
 module.exports = {
