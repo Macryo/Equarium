@@ -88,7 +88,9 @@
 }
 
 .meet_us_person .meet_us_messenger {
-    display: flex; 
+    display: grid;
+    justify-self: center;
+    align-self: center;
     grid-area: messenger;
     transform: scale(0.7);
     transition: transform .2s;
@@ -102,6 +104,8 @@
 .meet_us_person .meet_us_envelope {
     grid-area: envelope;
     transform: scale(0.7);
+    justify-self: center;
+    align-self: center;
     transition: transform .2s;
 }
 
@@ -123,20 +127,6 @@
 
 }
     
-}
-
-/* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
-    #meet_us_grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-    }
 }
 
 /* 
