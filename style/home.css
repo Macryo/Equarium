@@ -160,30 +160,6 @@
  }
 
  /* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
-
- @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
-    .dots {
-        left: 46%;
-    }
-
-    .dot {
-        height: var(--font-size-xs);
-        width: var(--font-size-xs);
-    }
-
-    .text {
-        color: #f2f2f2;
-        font-size: var(--font-size-m);
-        
-    }
-
- }
-
- /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
 */

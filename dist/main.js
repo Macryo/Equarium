@@ -17327,6 +17327,10 @@ function plusSlides(n) {
 }
 
 function currentSlide(n) {
+  if (sliderTimeout !== undefined) {
+    clearTimeout(sliderTimeout);
+  }
+
   showSlides(slideIndex = n);
 }
 
