@@ -20,6 +20,7 @@
  /* Slideshow container */
  .slideshow-container {  
     position: relative;
+    
  }
 
  /* Next & previous buttons */
@@ -64,9 +65,9 @@
  /* The dots/bullets/indicators */
 
  .dots{
-    position: absolute;
-    bottom: 3%;
-    left: 47%; 
+    position: relative;
+    bottom: 10%;
+    
  }
 
  .dot {
@@ -122,9 +123,6 @@
 
  @media (min-width: 1024px) and (max-width: 1280px) {
 
-    .dots {
-       left: 46%;
-    }
     .dot {
        height: var(--font-size-s);
        width: var(--font-size-s);
@@ -143,14 +141,9 @@
 */
 
  @media (min-width: 768px) and (max-width: 1024px) {
-
-    .dots {
-        left: 46%;
-    }
-
     .dot {
-        height: var(--font-size-xs);
-        width: var(--font-size-xs);
+        height: var(--font-size-s);
+        width: var(--font-size-s);
     }
     .text {
         color: #f2f2f2;
@@ -165,13 +158,9 @@
 */
 
  @media (min-width: 481px) and (max-width: 767px) {
-    .dots {
-        left: 46%;
-    }
-
     .dot {
-        height: var(--font-size-xs);
-        width: var(--font-size-xs);
+        height: var(--font-size-s);
+        width: var(--font-size-s);
     }
 
     .text {
@@ -187,21 +176,15 @@
 */
 
  @media (min-width: 319px) and (max-width: 480px) {
-
-    .dots {
-        left: 41%;
-    }
-
     .dot {
-        height: var(--font-size-xs);
-        width: var(--font-size-xs);
+        height: var(--font-size-s);
+        width: var(--font-size-s);
     }
 
     .text {
         color: #f2f2f2;
         font-size: var(--font-size-m);
         
-    }   
-
+    }  
      
  }
