@@ -2,5 +2,6 @@
 node_modules
 
 ### Wykluczenie main.js i main.js.map jako plików buildowalnych
-dist/main.js
-dist/main.js.map
+dist/*
+!dist/index.HTML
+

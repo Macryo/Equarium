@@ -17,8 +17,10 @@
     --font-weight-bold: 700;
 
     /* font-sizes */
+    --font-size-xl: 60px;
     --font-size-l: 48px;
     --font-size-m: 36px;
+    --font-size-ms: 28px;
     --font-size-s: 21px;
     --font-size-xs: 16px;
 }
