@@ -5,51 +5,77 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100vw;
+    max-height: 100vh;
+     
 }
 
 #meet_us_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
+    grid-auto-rows: auto;
+    grid-gap: 2%;
+    max-height: 100vh;
 }
 
 /* styling for each person */
 .meet_us_person {
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        "img img img img"
-        "textBig textBig textBig textBig"
-        "textSmall textSmall textSmall textSmall"
-        ". messenger envelope ." ;
+        "img img img img img img"
+        "textBig textBig textBig textBig textBig textBig"
+        "textSmall textSmall textSmall textSmall textSmall textSmall"
+        ". . messenger envelope . ." ;
     font-family: 'Oswald', sans-serif;
-    grid-gap: 10px;
+    grid-row-gap: 5px;
     border: 1px solid lightgrey;
-    padding: 40px;
+    padding: 25px 50px 25px;
     width: 100%;
-    max-height: 394px;
+    height: auto;
 }
 
 .meet_us_person:hover{
-    background-color: var(--green)
-}
-.meet_us_person img{
-    max-height:  200px;
+    background-color: var(--light-green);
 }
 
-.meet_us_person .meet_us_img {
+.meet_us_person:hover .meet_us_img_bottom {
+    opacity: 0;
+}
+
+.meet_us_person:hover .meet_us_img_top {
+    display: inline-block;
+}
+
+
+.meet_us_person img{
+    max-height:  200px;
+    padding-bottom: 10px;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.meet_us_person .meet_us_img_bottom {
     grid-area: img;
     display: flex;
     border-radius: 50%;
     justify-self: center;
 }
 
+.meet_us_person .meet_us_img_top {
+    grid-area: img;
+    display: flex;
+    border-radius: 50%;
+    justify-self: center;
+    display:none;
+}
+
 .meet_us_person .meet_us_text1 {
     grid-area: textBig;
-    font-size: 36px;
+    font-size: var(--font-size-m);
     color: var(--dark-blue);
     text-align: center;
 }
@@ -58,37 +84,32 @@
     grid-area: textSmall;
     text-align: center;
     font-family: serif;
-    font-size: 16px;
+    font-size: var(--font-size-s);
 }
 
 .meet_us_person .meet_us_messenger {
+    display: flex; 
     grid-area: messenger;
-    text-align: right;
-    font-size: 30px;
+    transform: scale(0.7);
+    transition: transform .2s;
 }
 
-.meet_us_person .meet_us_messenger:hover {
-    font-size: 40px;
+.meet_us_person .meet_us_messenger:hover {  
+     transform: scale(1);
+     cursor: pointer;  
 }
 
 .meet_us_person .meet_us_envelope {
     grid-area: envelope;
-    text-align: left;
-    font-size: 30px;
-
+    transform: scale(0.7);
+    transition: transform .2s;
 }
 
 .meet_us_person .meet_us_envelope:hover {
-    font-size: 40px;
+     transform: scale(1);
+     cursor: pointer;   
 }
 
-/* styling for each person */
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-
-
-
-}
 
 /* 
   ##Device = Tablets, Ipads (portrait)
@@ -96,7 +117,11 @@
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
+#meet_us_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
+}
     
 }
 
@@ -107,8 +132,11 @@
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
-    
+    #meet_us_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
 
+    }
 }
 
 /* 
@@ -118,9 +146,27 @@
 
 @media (min-width: 481px) and (max-width: 767px) {
 
-    
+     #meet_us_grid {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+
+     }
+     .meet_us_person img {
+         max-height: 150px;
+     }
+     .meet_us_person .meet_us_text1 {
+         
+         font-size: var(--font-size-s);
+         
+     }
+
+     .meet_us_person .meet_us_text2 {
+         
+         font-size: var(--font-size-xs);
+     }
 
 }
+
 
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
@@ -129,6 +175,22 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
 
-    
+    #meet_us_grid {    
+        grid-template-columns: 1fr;
+    }
+    .meet_us_person img {
+        max-height: 150px;
+    }
+
+    .meet_us_person .meet_us_text1 {
+
+        font-size: var(--font-size-s);
+
+    }
+
+    .meet_us_person .meet_us_text2 {
+
+        font-size: var(--font-size-xs);
+    }
 
 }
