@@ -121,11 +121,11 @@
   ##Screen = B/w 1024px to 1280px
 */
 
- @media (min-width: 1024px) and (max-width: 1280px) {
+ @media (min-width: 1025px) and (max-width: 1280px) {
 
     .dot {
-       height: var(--font-size-s);
-       width: var(--font-size-s);
+       height: var(--font-size-m);
+       width: var(--font-size-m);
     }
     .text {
         color: #f2f2f2;
@@ -142,14 +142,14 @@
 
  @media (min-width: 768px) and (max-width: 1024px) {
     .dot {
-        height: var(--font-size-s);
-        width: var(--font-size-s);
+        height: var(--font-size-m);
+        width: var(--font-size-m);
     }
     .text {
         color: #f2f2f2;
-        font-size: var(--font-size-m);
+        font-size: var(--font-size-l);
     }
-
+    
  }
 
  /* 
@@ -159,14 +159,18 @@
 
  @media (min-width: 481px) and (max-width: 767px) {
     .dot {
-        height: var(--font-size-s);
-        width: var(--font-size-s);
+        height: var(--font-size-m);
+        width: var(--font-size-m);
     }
 
     .text {
         color: #f2f2f2;
-        font-size: var(--font-size-m);
+        font-size: var(--font-size-l);
     }   
+    .prev,
+    .next {
+        font-size: 30px;
+    }
 
  }
 
@@ -177,14 +181,18 @@
 
  @media (min-width: 319px) and (max-width: 480px) {
     .dot {
-        height: var(--font-size-s);
-        width: var(--font-size-s);
+        height: 30px;
+        width: 30px;
     }
 
     .text {
         color: #f2f2f2;
-        font-size: var(--font-size-m);
+        font-size: var(--font-size-l);
         
     }  
+    .prev,
+    .next {
+        font-size: 35px;
+    }
      
  }
