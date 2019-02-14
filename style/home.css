@@ -13,7 +13,7 @@
  .mySlides img {
      vertical-align: middle;
      height: 100vh;
-     width: 100vw;
+     width: 100%;
      object-fit: cover;
  }
 
