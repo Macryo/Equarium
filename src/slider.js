@@ -43,8 +43,42 @@ function showSlides(n) {
     }, 8000); // Change image every 8 seconds
 }
 
+let startingX;
+
+function handleTouchStart(evt) {
+    startingX = evt.touches[0].clientX;
+}
+
+function handleTouchMove(evt) {
+    let touch = evt.touches[0];
+    let change = startingX - touch.clientX;
+    if (change <= 0) {
+        return;
+    }
+
+    evt.preventDefault();
+}
+
+function handleTouchEnd(evt) {
+    let change = startingX - evt.changedTouches[0].clientX;
+    let threshold = screen.width / 3;
+    if (change < threshold) {
+        console.log(change + " " + threshold)
+        changeSlide(-1)
+    } else if (change > threshold) {
+        console.log(change + " " + threshold)
+        changeSlide(1)
+    } else {
+        return
+    }
+}
+
 
 module.exports = {
     changeSlide,
     currentSlide,
+    handleTouchEnd,
+    handleTouchMove,
+    handleTouchStart,
+    startingX
 };
