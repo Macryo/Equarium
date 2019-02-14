@@ -1,0 +1,186 @@
+@import url("variables.css");
+
+/* section layout */
+#meet_us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+     
+}
+
+#meet_us_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 2%;
+    max-height: 100vh;
+}
+
+/* styling for each person */
+.meet_us_person {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "img img img img img img"
+        "textBig textBig textBig textBig textBig textBig"
+        "textSmall textSmall textSmall textSmall textSmall textSmall"
+        ". . messenger envelope . ." ;
+    font-family: 'Oswald', sans-serif;
+    grid-row-gap: 5px;
+    border: 1px solid lightgrey;
+    padding: 25px 50px 25px;
+    width: 100%;
+    height: auto;
+}
+
+.meet_us_person:hover{
+    background-color: var(--light-green);
+}
+
+.meet_us_person:hover .meet_us_img_bottom {
+    opacity: 0;
+}
+
+.meet_us_person:hover .meet_us_img_top {
+    display: inline-block;
+}
+
+
+.meet_us_person img{
+    max-height:  200px;
+    padding-bottom: 10px;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.meet_us_person .meet_us_img_bottom {
+    grid-area: img;
+    display: flex;
+    border-radius: 50%;
+    justify-self: center;
+}
+
+.meet_us_person .meet_us_img_top {
+    grid-area: img;
+    display: flex;
+    border-radius: 50%;
+    justify-self: center;
+    display:none;
+}
+
+.meet_us_person .meet_us_text1 {
+    grid-area: textBig;
+    font-size: var(--font-size-m);
+    color: var(--dark-blue);
+    text-align: center;
+}
+
+.meet_us_person .meet_us_text2 {
+    grid-area: textSmall;
+    text-align: center;
+    font-family: serif;
+    font-size: var(--font-size-s);
+}
+
+.meet_us_person .meet_us_messenger {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    grid-area: messenger;
+    transform: scale(0.7);
+    transition: transform .2s;
+}
+
+.meet_us_person .meet_us_messenger:hover {  
+     transform: scale(1);
+     cursor: pointer;  
+}
+
+.meet_us_person .meet_us_envelope {
+    grid-area: envelope;
+    transform: scale(0.7);
+    justify-self: center;
+    align-self: center;
+    transition: transform .2s;
+}
+
+.meet_us_person .meet_us_envelope:hover {
+     transform: scale(1);
+     cursor: pointer;   
+}
+
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+#meet_us_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+    
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+     #meet_us_grid {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+
+     }
+     .meet_us_person img {
+         max-height: 150px;
+     }
+     .meet_us_person .meet_us_text1 {
+         
+         font-size: var(--font-size-s);
+         
+     }
+
+     .meet_us_person .meet_us_text2 {
+         
+         font-size: var(--font-size-xs);
+     }
+
+}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    #meet_us_grid {    
+        grid-template-columns: 1fr;
+    }
+    .meet_us_person img {
+        max-height: 150px;
+    }
+
+    .meet_us_person .meet_us_text1 {
+
+        font-size: var(--font-size-s);
+
+    }
+
+    .meet_us_person .meet_us_text2 {
+
+        font-size: var(--font-size-xs);
+    }
+
+}

@@ -1,0 +1,190 @@
+@import url("variables.css");
+
+/* home section styling */
+#home{
+    height: 100vh;
+    
+    font-family: var(--oswald-font)
+}
+ .mySlides {
+     display: none;
+ }
+
+ .mySlides img {
+     vertical-align: middle;
+     height: 100vh;
+     width: 100vw;
+     object-fit: cover;
+ }
+
+ /* Slideshow container */
+ .slideshow-container {  
+    position: relative;
+    
+ }
+
+ /* Next & previous buttons */
+ .prev,
+ .next {
+     cursor: pointer;
+     position: absolute;
+     top: 50%;
+     width: auto;
+     padding: 16px;
+     margin-top: -22px;
+     color: white;
+     font-weight: bold;
+     font-size: 18px;
+     transition: 0.6s ease;
+     border-radius: 0 3px 3px 0;
+     user-select: none;
+ }
+
+ /* Position the "next button" to the right */
+ .next {
+     right: 0;
+     border-radius: 3px 0 0 3px;
+ }
+
+ /* On hover, add a black background color with a little bit see-through */
+ .prev:hover,
+ .next:hover {
+     background-color: var(--light-green);
+ }
+
+ /* Caption text */
+ .text {
+     color: #f2f2f2;
+     font-size: var(--font-size-xl);
+     position: absolute;
+     bottom: 30%;
+     width: 100%;
+     text-align: center;
+ }
+
+ /* The dots/bullets/indicators */
+
+ .dots{
+    position: relative;
+    bottom: 10%;
+    
+ }
+
+ .dot {
+     cursor: pointer;
+     height: var(--font-size-ms);
+     width: var(--font-size-ms);
+     margin: 0 2px;
+     background-color: white;
+     border-radius: 50%;
+     display: inline-block;
+     transition: background-color 0.6s ease;
+ }
+
+ .active,
+ .dot:hover {
+     background-color: var(--light-green);
+ }
+
+ /* Fading animation */
+ .fade {
+     -webkit-animation-name: fade;
+     -webkit-animation-duration: 1.5s;
+     animation-name: fade;
+     animation-duration: 1.5s;
+ }
+
+ @-webkit-keyframes fade {
+     from {
+         opacity: .4
+     }
+
+     to {
+         opacity: 1
+     }
+ }
+
+ @keyframes fade {
+     from {
+         opacity: .4
+     }
+
+     to {
+         opacity: 1
+     }
+ }
+
+ 
+
+ /* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1024px to 1280px
+*/
+
+ @media (min-width: 1024px) and (max-width: 1280px) {
+
+    .dot {
+       height: var(--font-size-s);
+       width: var(--font-size-s);
+    }
+    .text {
+        color: #f2f2f2;
+        font-size: var(--font-size-xl);
+        bottom: 30%;
+    }
+
+ }
+
+ /* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+ @media (min-width: 768px) and (max-width: 1024px) {
+    .dot {
+        height: var(--font-size-s);
+        width: var(--font-size-s);
+    }
+    .text {
+        color: #f2f2f2;
+        font-size: var(--font-size-m);
+    }
+
+ }
+
+ /* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+ @media (min-width: 481px) and (max-width: 767px) {
+    .dot {
+        height: var(--font-size-s);
+        width: var(--font-size-s);
+    }
+
+    .text {
+        color: #f2f2f2;
+        font-size: var(--font-size-m);
+    }   
+
+ }
+
+ /* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+ @media (min-width: 319px) and (max-width: 480px) {
+    .dot {
+        height: var(--font-size-s);
+        width: var(--font-size-s);
+    }
+
+    .text {
+        color: #f2f2f2;
+        font-size: var(--font-size-m);
+        
+    }  
+     
+ }
