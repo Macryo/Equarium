@@ -26,6 +26,7 @@
  /* Next & previous buttons */
  .prev,
  .next {
+     display: block;
      cursor: pointer;
      position: absolute;
      top: 50%;
