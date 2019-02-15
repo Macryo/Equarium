@@ -159,8 +159,8 @@
 
  @media (min-width: 481px) and (max-width: 767px) {
     .dot {
-        height: var(--font-size-m);
-        width: var(--font-size-m);
+        height: 25px;
+        width: 25px;
     }
 
     .text {
@@ -179,10 +179,10 @@
   ##Screen = B/w 320px to 479px
 */
 
- @media (min-width: 319px) and (max-width: 480px) {
+ @media (min-width: 320px) and (max-width: 480px) {
     .dot {
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
     }
 
     .text {
