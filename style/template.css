@@ -1,0 +1,55 @@
+@import url("variables.css");
+
+/* Applies styling to tiltes */
+.template-title,
+.template-title-right {
+    color: var(--very-light-green);
+    font-family: var(--oswald-font);
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+    background-color: var(--dark-blue);
+    width: 55%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 10px 0;
+    
+}
+/* Applies in case of tiltes attached to right side */
+.template-title-right {
+    display: flex;
+    align-self: flex-end;
+} 
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 10px;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+}
+
+.grid-item {
+    padding: 20px;
+    display: flex;
+    align-self: center;
+    
+}
+
+.Mouse-over-it {
+    font-family: var(--noto-font);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-regular);
+    height: 60px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Mouse-over-it:hover {
+    background-color: var(--very-light-green);
+}

@@ -16,4 +16,5 @@ document.querySelector('#dot2').addEventListener('click', function(){currentSlid
 document.querySelector('#dot3').addEventListener('click', function(){currentSlide(3)});
 // slider functionality
 
+document.querySelector('.HoverOver').style.color = "red";
 
