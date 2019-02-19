@@ -3,12 +3,11 @@
 #AboutProjectSection{
     display: flex;
     flex-direction: column;
-    max-width: 100vw;
 }
 
 #AboutProjectText {
     color: #000;
-    font-family: var(---noto-font);
+    font-family: var(--noto-font);
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-regular);
 }

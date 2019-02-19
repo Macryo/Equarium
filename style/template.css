@@ -9,7 +9,7 @@
     font-weight: var(--font-weight-semibold);
     background-color: var(--dark-blue);
     width: 55%;
-    height: 80px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +20,7 @@
 .template-title-right {
     display: flex;
     align-self: flex-end;
+    
 } 
 
 .grid-container {
@@ -29,13 +30,14 @@
     padding: 10px;
     align-items: center;
     justify-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .grid-item {
-    padding: 20px;
+    /* padding: 20px; */
     display: flex;
     align-self: center;
+    max-width: 50%;
     
 }
 
@@ -51,5 +53,42 @@
 }
 
 .Mouse-over-it:hover {
+
     background-color: var(--very-light-green);
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+/* Need to change design for grid elements */
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .template-title,
+    .template-title-right {
+        font-size: var(--font-size-m);
+        
+    }
+
+}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 480px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    .template-title,
+    .template-title-right {
+        font-size: var(--font-size-xs);
+    }
 }
