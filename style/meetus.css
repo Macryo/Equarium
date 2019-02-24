@@ -3,18 +3,22 @@
 /* section layout */
 #meet_us {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     max-height: none;
+    align-content: center;
+    justify-content: center;
 }
 
 #meet_us_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: auto;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    padding: 20px;
     max-height: none;
+    
+    
 }
 
 /* styling for each person */
@@ -33,7 +37,10 @@
     border: 1px solid lightgrey;
     padding: 25px 50px 25px;
     width: 100%;
-    height: auto;
+    
+    justify-self: center;
+    
+    
 }
 
 .meet_us_person:hover{
@@ -121,11 +128,14 @@
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-#meet_us_grid {
-    grid-template-columns: 1fr 1fr;
+    #meet_us_grid {
+        grid-template-columns: 1fr 1fr;
 
-}
-    
+    }
+    .meet_us_person {
+        width: 90%;
+        height: 95%;
+    }
 }
 
 /* 
@@ -137,6 +147,20 @@
 
      #meet_us_grid {  
          grid-template-columns: 1fr 1fr;
+
+     }
+     .meet_us_person {
+         width: 90%;
+         height: 95%;
+     }
+     .meet_us_person .meet_us_messenger {
+         
+        transform: scale(0.8);
+         
+     }
+     .meet_us_person .meet_us_envelope {
+
+         transform: scale(0.8);
 
      }
      .meet_us_person img {
@@ -170,7 +194,10 @@
     .meet_us_person img {
         max-height: 150px;
     }
-
+    .meet_us_person{
+        width: 90%;
+        height: 90%;
+    }
     .meet_us_person .meet_us_text1 {
 
         font-size: var(--font-size-s);
