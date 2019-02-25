@@ -6,7 +6,6 @@ import {
   handleTouchMove,
   handleTouchStart
 } from './slider';
-import {changeSlide, currentSlide} from './slider';
 function component() {
   let element = document.createElement('div');
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
@@ -22,7 +21,7 @@ document.querySelector('#dot1').addEventListener('click', function(){currentSlid
 document.querySelector('#dot2').addEventListener('click', function(){currentSlide(2)});
 document.querySelector('#dot3').addEventListener('click', function(){currentSlide(3)});
 // slider functionality
-document.querySelector('.HoverOver').style.color = "red";
+// document.querySelector('.HoverOver').style.color = "red";
 
 document.querySelector('#sliderImg1').addEventListener('touchstart', handleTouchStart)
 document.querySelector('#sliderImg1').addEventListener('touchmove', handleTouchMove)
