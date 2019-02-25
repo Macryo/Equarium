@@ -1,0 +1,211 @@
+@import url("variables.css");
+/* form container style */
+#contact-form{
+    height: auto;
+    max-height: none;
+    
+}
+
+#form_container{
+    width: 100%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    max-height: none;
+    
+}
+
+/* left form child style */
+
+#form_child_left{
+    
+    /* border: 1px black solid; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+#form_child_left form{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    align-items: center;
+    width: 60%;
+}
+    /* inputs inside form */
+#form_child_left form input{
+    text-align: center;
+    height: 60%;
+}
+
+#form_child_left form input:focus {
+    background: var(--very-light-green)
+}
+
+#form_child_left form label {
+    text-align: center;
+    font-family: var(--noto-font);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-bold);
+    color: var(--dark-blue);
+    text-align: start;
+}
+
+#form_child_left form input[type=text]{
+    border: none;
+    font-family: var(--noto-font);
+    text-align: start;
+    border-bottom: 1px solid var(--blue);
+    font-family: var(--noto-font);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-regular);
+}
+#form_child_left form input[type=email] {
+    border: none;
+    text-align: start;
+    border-bottom: 1px solid var(--blue);
+    font-family: var(--noto-font);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-regular);
+}
+
+#form_child_left form input[type=submit]{
+    background-color: var(--very-light-green);
+    border:none;
+    width: 100%;
+    font-family: var(--noto-font);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-regular);
+    grid-row: span 2;
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10%;
+}
+    /* inputs inside form */
+
+/* right form child style */
+
+#form_child_right{
+    /* border: 1px black solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: var(--noto-font);
+    font-size: var(--font-size-ms);
+    font-weight: var(--font-weight-regular);
+    
+}
+
+#form_child_right img {
+    width: 50%;
+    padding-left: 20%;
+    
+}
+#form_child_right i{
+    position: relative;
+    top: 5%;
+    left: 20%;
+    max-width: 50px;
+    
+}
+#form_child_right p:nth-of-type(1) {
+    
+    padding-bottom: 10px;
+    padding-left: 30%;
+
+}
+#form_child_right p:nth-of-type(2) {
+    
+    padding-bottom: 20%;
+    padding-left: 30%;
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #form_child_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        font-size: var(--font-size-s);
+        height: auto;
+    }
+    #form_child_right i {
+        position: relative;
+        top: 20px;
+        left: 20%;
+        max-width: 50px;
+
+    }
+    #form_child_right img {
+        width: 50%;
+        padding-left: 30%;
+
+    }
+
+}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 480px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    #form_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        
+    }
+    #form_child_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;   
+        font-size: var(--font-size-s);
+        height: auto;
+    }
+    #form_child_left form {
+        width: auto;
+    }
+    
+
+    #form_child_right p:nth-of-type(1) {
+
+        display: flex;
+        align-self: center;
+        padding-left: 0%;
+
+    }
+
+    #form_child_right p:nth-of-type(2) {
+
+        align-self: center;
+        padding-left: 0%;
+    }  
+    #form_child_right i {
+        position: relative;
+        top: 20px;
+        left: 10%;
+        max-width: 50px;
+
+    }
+
+}
