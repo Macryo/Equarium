@@ -44,7 +44,7 @@
 }
 
 .meet_us_person:hover{
-    background-color: var(--light-green);
+    background-color: var(--very-light-green);
 }
 
 .meet_us_person:hover .meet_us_img_bottom {

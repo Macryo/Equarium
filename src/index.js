@@ -6,13 +6,14 @@ import {
   handleTouchMove,
   handleTouchStart
 } from './slider';
-function component() {
-  let element = document.createElement('div');
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  return element;
-}
 
-document.body.appendChild(component());
+// function component() {
+//   let element = document.createElement('div');
+//   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+//   return element;
+// }
+
+// document.body.appendChild(component());
 
 // slider functionality
 document.querySelector('.prev').addEventListener('click', function(){changeSlide(-1)});
