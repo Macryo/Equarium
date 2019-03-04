@@ -11,3 +11,18 @@
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-regular);
 }
+
+#AboutProjectSection .grid-container :nth-child(1){
+    grid-row: 2;
+    text-align: left;
+}
+
+#AboutProjectSection .grid-container :nth-child(2) {
+    height: 100%;
+    grid-row: 2;
+}
+
+#AboutProjectSection .grid-container :nth-child(3) {
+    grid-row: 3;
+}
+
