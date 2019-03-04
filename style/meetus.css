@@ -99,7 +99,7 @@
     justify-self: center;
     align-self: center;
     grid-area: messenger;
-    transform: scale(0.7);
+    transform: scale(0.6);
     transition: transform .2s;
 }
 
@@ -110,7 +110,7 @@
 
 .meet_us_person .meet_us_envelope {
     grid-area: envelope;
-    transform: scale(0.7);
+    transform: scale(0.6);
     justify-self: center;
     align-self: center;
     transition: transform .2s;

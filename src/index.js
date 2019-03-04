@@ -13,7 +13,7 @@ import {
 //   return element;
 // }
 
-// document.body.appendChild(component());
+
 
 // slider functionality
 document.querySelector('.prev').addEventListener('click', function(){changeSlide(-1)});
@@ -36,5 +36,16 @@ document.querySelector('#sliderImg3').addEventListener('touchstart', handleTouch
 document.querySelector('#sliderImg3').addEventListener('touchmove', handleTouchMove)
 document.querySelector('#sliderImg3').addEventListener('touchend', handleTouchEnd)
 
+function component() {
+  let element = document.createElement('span');
+  element.innerHTML = "Wrong email btw";
+  return element;
+  
+}
+var form = document.getElementById('form')
+ form.insertBefore(component(), form.firstChild);
+// console.log(form.querySelectorAll('input'))
 
+// form.appendChild(component());
+// document.getElementById('name')
 

@@ -12,7 +12,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    max-height: none;
+
     
 }
 
@@ -175,13 +175,16 @@
         grid-template-rows: 1fr 1fr;
         
     }
+
     #form_child_right {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;   
         font-size: var(--font-size-s);
         height: auto;
+        
     }
+
     #form_child_left form {
         width: auto;
     }

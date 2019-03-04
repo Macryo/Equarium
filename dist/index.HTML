@@ -202,19 +202,20 @@
   <div class="template-title-right">Kontakt</div>
   <div id="form_container">
     <div id="form_child_left">
-      <form>
+      <form id="form">
         <label for="name">Imię i nazwisko</label>
-        <input id ="name" type="text">
+        <input id ="name" type="text" class="input" required>
 
         <label for="email">Email</label>
-        <input id ="email" type="email">
+        <input id ="email" type="email" class="input" required>
 
         <label for="phone">Telefon</label>
-        <input id ="phone" type="text">
+        <input id ="phone" type="text" class="input" required>
 
         <label for="msg">Wiadomość</label>
-        <input id ="msg" type="text">
-        <input type="submit" value="Wyślij⟶">
+        <input id ="msg" type="text" class="input" required>
+
+        <input id ="submit" type="submit" value="Wyślij⟶">
       </form>
     </div>
     <div id="form_child_right">
