@@ -6,6 +6,7 @@ import {
   handleTouchMove,
   handleTouchStart
 } from './slider';
+import VanillaTilt from 'vanilla-tilt';
 
 function component() {
   let element = document.createElement('div');
@@ -20,6 +21,7 @@ document.body.appendChild(component());
 document.querySelector('#dot1').addEventListener('click', function(){currentSlide(1)});
 document.querySelector('#dot2').addEventListener('click', function(){currentSlide(2)});
 document.querySelector('#dot3').addEventListener('click', function(){currentSlide(3)});
+VanillaTilt.init(document.querySelectorAll(".your-element"));
 
 
 // slider functionality

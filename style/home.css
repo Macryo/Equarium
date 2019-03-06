@@ -52,7 +52,7 @@
  .text {
      color: var(--dark-blue);
      font-size: var(--font-size-l);
-     position:absolute;
+     position: absolute;
      bottom: 40%;
      right: 110%;
      width: 600px;
