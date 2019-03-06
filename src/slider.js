@@ -1,3 +1,4 @@
+
 var slideIndex = 1;
 var sliderTimeout;
 showSlides(slideIndex);
@@ -53,11 +54,10 @@ function handleTouchStart(evt) {
 function handleTouchMove(evt) {
     let touch = evt.touches[0];
     let change = startingX - touch.clientX;
-  
+
     if (change <= 0) {
         return;
     }
-
     evt.preventDefault();
 }
 
@@ -66,39 +66,59 @@ function handleTouchEnd(evt) {
     let threshold = screen.width / 3;
 
     if (change < threshold) {
-        if (startingX == evt.changedTouches[0].clientX){
+        if (startingX == evt.changedTouches[0].clientX) {
+            var dots = document.getElementsByClassName("dot");
             switch (evt.path[0].id) {
                 case "sliderImg1":
+                    dots[1].style.backgroundColor = "white";
+                    dots[2].style.backgroundColor = "white";
                     currentSlide(1);
+
                     break;
                 case "sliderImg2":
+                    dots[0].style.backgroundColor = "white";
+                    dots[2].style.backgroundColor = "white";
                     currentSlide(1);
+
                     break;
                 case "sliderImg3":
+                    dots[1].style.backgroundColor = "white";
+                    dots[0].style.backgroundColor = "white";
                     currentSlide(3);
-                break;
+
+                    break;
             }
-        }
-        else {
+        } else {
             changeSlide(-1)
         }
-        
+
     } else if (change > threshold) {
-        
+
         if (startingX == evt.changedTouches[0].clientX) {
+            var dots = document.getElementsByClassName("dot");
             switch (evt.path[0].id) {
+
                 case "sliderImg1":
+                    dots[1].style.backgroundColor = "white";
+                    dots[2].style.backgroundColor = "white";
                     currentSlide(1);
+
+
                     break;
                 case "sliderImg2":
+                    dots[0].style.backgroundColor = "white";
+                    dots[2].style.backgroundColor = "white";
                     currentSlide(1);
+
                     break;
                 case "sliderImg3":
+                    dots[1].style.backgroundColor = "white";
+                    dots[0].style.backgroundColor = "white";
                     currentSlide(3);
+
                     break;
             }
-        }
-         else {
+        } else {
             changeSlide(1)
         }
     } else {
@@ -107,11 +127,12 @@ function handleTouchEnd(evt) {
 }
 
 
+
 module.exports = {
     changeSlide,
     currentSlide,
     handleTouchEnd,
     handleTouchMove,
     handleTouchStart,
-    startingX
+    startingX  
 };
