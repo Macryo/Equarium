@@ -22,24 +22,23 @@ function currentSlide(n) {
 
 function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {
+    var texts = document.getElementsByClassName("text");
+    if (n > texts.length) {
         slideIndex = 1
     }
     if (n < 1) {
-        slideIndex = slides.length
+        slideIndex = texts.length
     }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    for (i = 0; i < texts.length; i++) {
+        
+        texts[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    
-    slides[slideIndex - 1].style.display = "block";
+    texts[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
-    
     sliderTimeout = setTimeout(function () {
         plusSlides(1)
     }, 8000); // Change image every 8 seconds
@@ -68,25 +67,15 @@ function handleTouchEnd(evt) {
 
     if (change < threshold) {
         if (startingX == evt.changedTouches[0].clientX){
-            var dots = document.getElementsByClassName("dot");
             switch (evt.path[0].id) {
                 case "sliderImg1":
-                    dots[1].style.backgroundColor = "white";
-                    dots[2].style.backgroundColor = "white";
                     currentSlide(1);
-                    
                     break;
                 case "sliderImg2":
-                    dots[0].style.backgroundColor = "white";
-                    dots[2].style.backgroundColor = "white";
                     currentSlide(1);
-                    
                     break;
                 case "sliderImg3":
-                    dots[1].style.backgroundColor = "white";
-                    dots[0].style.backgroundColor = "white";
                     currentSlide(3);
-                    
                 break;
             }
         }
@@ -97,27 +86,15 @@ function handleTouchEnd(evt) {
     } else if (change > threshold) {
         
         if (startingX == evt.changedTouches[0].clientX) {
-            var dots = document.getElementsByClassName("dot");
             switch (evt.path[0].id) {
-                
                 case "sliderImg1":
-                    dots[1].style.backgroundColor = "white";
-                    dots[2].style.backgroundColor = "white";
                     currentSlide(1);
-                    
-                    
                     break;
                 case "sliderImg2":
-                    dots[0].style.backgroundColor = "white";
-                    dots[2].style.backgroundColor = "white";
                     currentSlide(1);
-                    
                     break;
                 case "sliderImg3":
-                    dots[1].style.backgroundColor = "white";
-                    dots[0].style.backgroundColor = "white";
                     currentSlide(3);
-                    
                     break;
             }
         }
@@ -128,21 +105,8 @@ function handleTouchEnd(evt) {
         return
     }
 }
-function isMobile(x) {
-    if (x.matches) { // If media query matches
-        document.getElementById("sliderImg1").src = "../Images/Slider_placeholder/bg_mobile.png";
-        document.getElementById("sliderImg2").src = "../Images/Slider_placeholder/bg_mobile.png";
-        document.getElementById("sliderImg3").src = "../Images/Slider_placeholder/bg_mobile.png";
-    } else {
-        document.getElementById("sliderImg1").src = "../Images/Slider_placeholder/2blobki.png";
-        document.getElementById("sliderImg2").src = "../Images/Slider_placeholder/2blobki.png";
-        document.getElementById("sliderImg3").src = "../Images/Slider_placeholder/2blobki.png";
-    }
-}
 
-var x = window.matchMedia("(max-width: 480px)")
-isMobile(x) // Call listener function at run time
-x.addListener(isMobile) // Attach listener function on state changes
+
 module.exports = {
     changeSlide,
     currentSlide,

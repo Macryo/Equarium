@@ -7,7 +7,7 @@
     font-family: var(--oswald-font)
 }
  .mySlides {
-     display: none;
+     display: block;
      max-width: 550px;
      position: relative;
      left: 55%;
