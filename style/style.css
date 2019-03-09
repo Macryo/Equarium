@@ -56,12 +56,12 @@ section{
     text-align: center;
 }
 
-li{
+/* li{
     text-transform: uppercase;
     color: #000;
     font-family: 'Oswald', sans-serif;
     font-size: 21px;
-}
+} */
 
 a:visited{
     color: #000;

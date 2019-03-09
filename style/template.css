@@ -14,13 +14,10 @@
     justify-content: center;
     align-items: center;
     margin: 40px 0 10px 0;
-    padding: 10px;
 }
 /* Applies in case of tiltes attached to right side */
 .template-title-right {
-    display: flex;
     align-self: flex-end;
-    
 } 
 
 .grid-container {

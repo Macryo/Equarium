@@ -1,0 +1,56 @@
+@import url("variables.css");
+
+#MentorsAndStudents {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    height: 100vh;
+}
+
+/* Mentors grid */
+
+
+#MentorsAndStudents :nth-child(1){
+    grid-column: 2;
+    grid-row: 1;
+    width: 110%;
+}
+
+#MentorsAndStudents :nth-child(2) {
+    grid-column: 2;
+    grid-row: 3 / 7;
+}
+
+#MentorsAndStudents :nth-child(3) {
+    grid-column: 2;
+    grid-row: 7;
+}
+
+/* Students part of grid */
+
+#MentorsAndStudents :nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#MentorsAndStudents :nth-child(5) {
+    grid-column: 1;
+    grid-row: 5 / 6;
+}
+
+#MentorsAndStudents :nth-child(6) {
+    grid-column: 1;
+    grid-row: 7;
+}
+
+#MentorsAndStudents :nth-child(7) {
+    grid-column: 1;
+    grid-row: 8;
+}
+
+
+#MentorsAndStudents :nth-child(2) ul {
+    font-family: var(--noto-font);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-s);
+}
