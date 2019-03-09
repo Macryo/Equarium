@@ -17,8 +17,8 @@
     grid-column-gap: 10px;
     padding: 20px;
     max-height: none;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
 
 }
 /* mobile hide / show style */
@@ -113,22 +113,9 @@
     background-color: var(--very-light-green);
 }
 
-.meet_us_person:hover .meet_us_img_bottom {
-    opacity: 0;
-}
-
-.meet_us_person:hover .meet_us_img_top {
-    display: inline-block;
-}
-
-
 .meet_us_person img{
-    max-height:  200px;
+    max-height:  180px;
     padding-bottom: 10px;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    -o-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
 }
 
 .meet_us_person .meet_us_img_bottom {
@@ -138,13 +125,6 @@
     justify-self: center;
 }
 
-.meet_us_person .meet_us_img_top {
-    grid-area: img;
-    display: flex;
-    border-radius: 50%;
-    justify-self: center;
-    display:none;
-}
 
 .meet_us_person .meet_us_text1 {
     grid-area: textBig;
