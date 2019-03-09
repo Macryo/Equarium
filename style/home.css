@@ -7,39 +7,37 @@
     font-family: var(--oswald-font)
 }
  .mySlides {
-     display: none;
+     display: block;
+     max-width: 550px;
+     position: relative;
+     left: 55%;
+     top: 10%;
  }
 
  .mySlides img {
-     vertical-align: middle;
-     height: 100vh;
      width: 100%;
-     object-fit: cover;
+     height: auto;
+ }
+ .mySlides img.quotationMark {
+     height: 100px;
+     width: 100px;
+     position: absolute;
+     bottom: 50%;
+     right: 205%;
+     color: white;
+     fill: currentColor;
+
  }
 
  /* Slideshow container */
  .slideshow-container {  
     position: relative;
+    height: 100vh;
     
  }
 
  /* Next & previous buttons */
- .prev,
- .next {
-     display: block;
-     cursor: pointer;
-     position: absolute;
-     top: 50%;
-     width: auto;
-     padding: 16px;
-     margin-top: -22px;
-     color: white;
-     font-weight: bold;
-     font-size: 18px;
-     transition: 0.6s ease;
-     border-radius: 0 3px 3px 0;
-     user-select: none;
- }
+
 
  /* Position the "next button" to the right */
  .next {
@@ -48,26 +46,24 @@
  }
 
  /* On hover, add a black background color with a little bit see-through */
- .prev:hover,
- .next:hover {
-     background-color: var(--light-green);
- }
+
 
  /* Caption text */
  .text {
-     color: #f2f2f2;
-     font-size: var(--font-size-xl);
+     color: var(--dark-blue);
+     font-size: var(--font-size-l);
      position: absolute;
-     bottom: 30%;
-     width: 100%;
-     text-align: center;
+     bottom: 40%;
+     right: 110%;
+     width: 600px;
+     
  }
 
  /* The dots/bullets/indicators */
 
  .dots{
     position: relative;
-    bottom: 10%;
+    bottom: 15%;
     
  }
 
@@ -76,7 +72,7 @@
      height: var(--font-size-ms);
      width: var(--font-size-ms);
      margin: 0 2px;
-     background-color: white;
+     background-color: whitesmoke ;
      border-radius: 50%;
      display: inline-block;
      transition: background-color 0.6s ease;
@@ -84,8 +80,12 @@
 
  .active,
  .dot:hover {
-     background-color: var(--light-green);
+     background-color: var(--blue);
  }
+ .dot:hover {
+     background-color: var(--blue);
+ }
+
 
  /* Fading animation */
  .fade {
@@ -122,18 +122,39 @@
   ##Screen = B/w 1024px to 1280px
 */
 
- @media (min-width: 1025px) and (max-width: 1280px) {
+ @media (min-width: 1024px) and (max-width: 1280px) {
 
     .dot {
-       height: var(--font-size-m);
-       width: var(--font-size-m);
+       height: var(--font-size-ms);
+       width: var(--font-size-ms);
     }
-    .text {
-        color: #f2f2f2;
-        font-size: var(--font-size-xl);
-        bottom: 30%;
-    }
+     
+     .mySlides {
+         max-width: 450px;
+         left: 55%;
+         top: 15%;
+     }
+    
+    
+     .text {
+         color: var(--dark-blue);
+         font-size: var(--font-size-m);
+         position: absolute;
+         bottom: 40%;
+         right: 100%;
+         width: 500px;
 
+     }
+     .mySlides img.quotationMark {
+         height: 15%;
+         width: 15%;
+         position: absolute;
+         bottom: 50%;
+         right: 200%;
+         color: white;
+         fill: currentColor;
+
+     }
  }
 
  /* 
@@ -141,16 +162,36 @@
   ##Screen = B/w 768px to 1024px
 */
 
- @media (min-width: 768px) and (max-width: 1024px) {
-    .dot {
-        height: 30px;
-        width: 30px;
-    }
-    .text {
-        color: #f2f2f2;
-        font-size: var(--font-size-l);
-    }
+ @media (min-width: 768px) and (max-width: 1023px) {
     
+    .text {
+        color: var(--dark-blue);
+        font-size: var(--font-size-m);
+        position: absolute;
+        bottom: 30%;
+        right: 120%;
+        width: 200px;
+        text-align: center;
+
+    }
+    .mySlides {
+        
+        max-width: 380px;
+        position: relative;
+        left: 50%;
+        top: 30%;
+    }
+    .mySlides img.quotationMark {
+        height: 10%;
+        width: 10%;
+        bottom: 67%;
+        right: 158%;
+    }
+
+    .dot {
+        height: var(--font-size-s);
+        width: var(--font-size-s);
+    }
  }
 
  /* 
@@ -160,18 +201,32 @@
 
  @media (min-width: 481px) and (max-width: 767px) {
     .dot {
-        height: 25px;
-        width: 25px;
+        height: var(--font-size-s);
+        width: var(--font-size-s);
     }
 
     .text {
-        color: #f2f2f2;
-        font-size: var(--font-size-l);
-    }   
-    .prev,
-    .next {
-        font-size: 30px;
+        color: var(--dark-blue);
+        font-size: var(--font-size-ms);
+        bottom: 30%;
+        right: 120%;
+        width: 200px;
+        text-align: center;
+
     }
+    .mySlides {
+        max-width: 250px;   
+        left: 50%;
+        top: 30%;
+    }
+
+    .mySlides img.quotationMark {
+        height: 10%;
+        width: 10%;
+        bottom: 65%;
+        right: 185%;
+    }
+    
 
  }
 
@@ -181,19 +236,33 @@
 */
 
  @media (min-width: 320px) and (max-width: 480px) {
-    .dot {
-        height: 25px;
-        width: 25px;
+    .mySlides {
+        left: 0%;
+        top: 0%;
     }
 
-    .text {
-        color: #f2f2f2;
-        font-size: var(--font-size-l);
-        
-    }  
-    .prev,
-    .next {
-        font-size: 35px;
+    .mySlides img {
+        vertical-align: middle;
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        max-width: none;
     }
-     
+    .mySlides img.quotationMark {
+        position: absolute;
+        top: 28%;
+        left: 13%; 
+    }
+    
+
+    .text {
+        left: 25%;
+        line-height: 1.3;
+        top: 35%;
+        color: #f2f2f2;
+        font-size: var(--font-size-m);
+        width: 250px; 
+        text-align: start;
+    }  
+    
  }
