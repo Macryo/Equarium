@@ -8,7 +8,7 @@
 
 #form_container{
     width: 100%;
-    margin-top: 5%;
+    margin-bottom: 5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -37,6 +37,11 @@
 #form_child_left form input{
     text-align: center;
     height: 60%;
+}
+#form_child_left form  input[type=number]::-webkit-inner-spin-button,
+#form_child_left form  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 #form_child_left form input:focus {
@@ -84,6 +89,24 @@
     align-items: center;
     padding-right: 10%;
 }
+
+#errorMsg {
+    display: none;
+    color: red;
+    font-family: var(--noto-font);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-regular);
+    text-align: center;
+
+}
+#successMsg {
+    display: none;
+    color: green;
+    font-family: var(--noto-font);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-regular);
+     text-align: center;
+}
     /* inputs inside form */
 
 /* right form child style */
@@ -106,10 +129,18 @@
 }
 #form_child_right i{
     position: relative;
-    top: 5%;
+    top: 7%;
     left: 20%;
     max-width: 50px;
     
+}
+
+#form_child_right i:nth-of-type(2) {
+    position: relative;
+    top: 5%;
+    left: 20%;
+    max-width: 50px;
+
 }
 #form_child_right p:nth-of-type(1) {
     
@@ -130,6 +161,12 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
     
+#form_child_left form input[type=submit] {
+    height: 100%;
+}
+#form_child_left form {
+    width: 80%;
+}
 
 }
 
@@ -139,12 +176,23 @@
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+    #form_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
     #form_child_right {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         font-size: var(--font-size-s);
         height: auto;
+
+    }
+
+    #form_child_left form {
+        width: 70%;
     }
     #form_child_right i {
         position: relative;
@@ -158,7 +206,20 @@
         padding-left: 30%;
 
     }
+    #form_child_left form input[type=submit] {
+        height: 100%;
+    }
+    #errorMsg {
 
+        font-size: var(--font-size-xs)
+
+
+    }
+
+    #successMsg {
+
+        font-size: var(--font-size-s)
+    }
 }
 
 
@@ -195,6 +256,7 @@
         display: flex;
         align-self: center;
         padding-left: 0%;
+        
 
     }
 
@@ -206,9 +268,35 @@
     #form_child_right i {
         position: relative;
         top: 20px;
-        left: 10%;
+        left: 18%;
         max-width: 50px;
 
     }
+    #form_child_right i:nth-of-type(2) {
+        position: relative;
+        top: 20px;
+        left: 18%;
+        max-width: 50px;
+        
 
+    }
+    #form_child_left form input[type=submit] {
+        
+        min-height: 25px;
+    }
+    #errorMsg {
+        
+        font-size: var(--font-size-xs);
+        word-wrap:break-word;
+       
+
+    }
+
+    #successMsg {
+        
+        font-size: var(--font-size-s);
+        
+        word-wrap:break-word;
+        
+    }
 }

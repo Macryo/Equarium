@@ -132,7 +132,7 @@
   <!--For students-->
 
 
-      <section id="meet_us">
+      <!-- <section id="meet_us">
         <div class="template-title-right">Poznaj nas</div>
         <div id="meet_us_grid">
           <div class="meet_us_person">
@@ -185,7 +185,7 @@
           </div>
         </div>
       </section>
-
+ -->
 
 <!-- section contact form -->
 
@@ -194,17 +194,19 @@
   <div id="form_container">
     <div id="form_child_left">
       <form id="form">
+        <div id="errorMsg"></div>
+        <div id="successMsg"></div>
         <label for="name">Imię i nazwisko</label>
-        <input id ="name" type="text" class="input" required>
+        <input name = "imię i nazwisko" id ="name" type="text" class="input" >
 
         <label for="email">Email</label>
-        <input id ="email" type="email" class="input" required>
+        <input name = "email" id ="email" type="text" class="input" >
 
         <label for="phone">Telefon</label>
-        <input id ="phone" type="text" class="input" required>
+        <input name = "telefon" id ="phone" type="text" class="input" >
 
         <label for="msg">Wiadomość</label>
-        <input id ="msg" type="text" class="input" required>
+        <input name = "wiadomość" id ="msg" type="text" class="input" >
 
         <input id ="submit" type="submit" value="Wyślij⟶">
       </form>

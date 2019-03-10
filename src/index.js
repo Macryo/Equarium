@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import validate from './form';
 import {
   changeSlide,
   currentSlide,
@@ -7,6 +8,7 @@ import {
   handleTouchStart
 } from './slider';
 import VanillaTilt from 'vanilla-tilt';
+
 
 // function component() {
 //   let element = document.createElement('div');
@@ -35,10 +37,18 @@ function isMobile(x) {
     VanillaTilt.init(element);
   }
 }
-
-
-
 // slider functionality
+
+// contact form 
+
+document.getElementById('form').addEventListener('submit', validate);
+
+//contact form
+
+
+
+
+
 // document.querySelector('.HoverOver').style.color = "red";
 
 // document.querySelector('#sliderImg1').addEventListener('touchstart', handleTouchStart)
@@ -53,16 +63,14 @@ function isMobile(x) {
 // document.querySelector('#sliderImg3').addEventListener('touchmove', handleTouchMove)
 // document.querySelector('#sliderImg3').addEventListener('touchend', handleTouchEnd)
 
-function component() {
-  let element = document.createElement('span');
-  element.innerHTML = "Wrong email btw";
-  return element;
-  
-}
-var form = document.getElementById('form')
- form.insertBefore(component(), form.firstChild);
-// console.log(form.querySelectorAll('input'))
 
-// form.appendChild(component());
-// document.getElementById('name')
+
+
+
+
+
+
+
+
+
 
