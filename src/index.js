@@ -29,12 +29,42 @@ VanillaTilt.init(element);
 function isMobile(x) {
   if (x.matches) { // If media query matches
     document.getElementById("sliderImg1").src = "../Images/Slider_placeholder/bg_mobile.png";
+    document.getElementById("logo").src = "../Images/header_footer/logo_white_mobile.svg";
+    document.getElementById("hamburger").style.display = 'block';
+    document.getElementById("hambi").addEventListener('click', function () {
+      document.getElementById('hamburger').style.height = '600%';
+      document.getElementById('logo').style.left = "0%";
+      document.getElementById('hamburger').style.background = 'var(--blue)';
+      document.getElementById('hambi').style.display = 'none'
+      document.getElementById('menu_list').style.display = 'flex';
+      document.getElementsByClassName('hidden')[0].style.display = 'flex';
+      document.getElementsByClassName('hidden')[1].style.display = 'flex';
+      document.getElementsByClassName('hidden')[2].style.display = 'flex';
+      
+      document.getElementById("exit").addEventListener('click', function () {
+        document.getElementById('hamburger').style.height = '100%';
+        document.getElementById('faceright').style.display = 'none';
+        document.getElementById('faceleft').style.display = 'none';
+        document.getElementById('exit').style.display = 'none';
+        document.getElementById('logo').style.left = "20%";
+        document.getElementById('hamburger').style.background = 'transparent';
+        document.getElementById('hambi').style.display = 'block'
+        document.getElementById('menu_list').style.display = 'none';
+      });
+      
+    })
+    
     element.vanillaTilt.destroy();
   } else {
     document.getElementById("sliderImg1").src = "../Images/Slider_placeholder/2blobki.png";
+    document.getElementById("logo").src = "../Images/header_footer/logo_mobile@2x.png";
+    document.getElementById("hamburger").style.display = 'none';
+    
+    
     VanillaTilt.init(element);
   }
 }
+ 
 
 
 
