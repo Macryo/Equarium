@@ -138,6 +138,9 @@
     text-align: center;
     font-family: var(--noto-font);
     font-size: var(--font-size-s);
+    display: flex;
+    align-self: center;
+    justify-self: center;
 }
 
 .meet_us_person .meet_us_messenger {
@@ -147,6 +150,7 @@
     grid-area: messenger;
     transform: scale(0.7);
     transition: transform .2s;
+    padding-bottom: 0;
 }
 
 .meet_us_person .meet_us_messenger:hover {  
@@ -160,6 +164,7 @@
     justify-self: center;
     align-self: center;
     transition: transform .2s;
+    padding-bottom: 0;
 }
 
 .meet_us_person .meet_us_envelope:hover {
@@ -258,5 +263,12 @@
 
         font-size: var(--font-size-xs);
     }
+    .meet_us_person .meet_us_messenger {
+        
+        padding-bottom: 10px;
+    }
+    .meet_us_person .meet_us_envelope {
 
+        padding-bottom: 10px;
+    }
 }
