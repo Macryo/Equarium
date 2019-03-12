@@ -65,6 +65,7 @@ li a {
 }
 #hamburger{
     position: relative;
+    
 }
 
 
@@ -131,13 +132,14 @@ li a {
   ##Screen = B/w 320px to 479px
 */
 
- @media (min-width: 320px) and (max-width: 480px) {
+ @media (min-width: 319px) and (max-width: 480px) {
     nav {
         display: grid;
         grid-template-columns: 5fr 7fr;
         position: fixed;
-        height: 3%;
-        background-color: transparent;
+        height: 8%;
+        background-color: var(--dark-blue);
+        
         z-index: 1;
         
         width: 100%;
@@ -155,8 +157,8 @@ li a {
     nav ul li{
 
         display: grid;
-        justify-content: center;
-        align-self: center;
+        padding-left: 20%;
+        align-self: start;
         width: 100%;
         
     }
@@ -164,8 +166,9 @@ li a {
         display: flex;
         color: white;
         align-self: center;
-        width: 100%;
-        padding-bottom: 10px;
+        
+        padding-bottom: 15px;
+        font-size: var(--font-size-ms)
 
     }
 
@@ -174,20 +177,28 @@ li a {
        
     }
      nav ul li:hover a{
-         color: var(--blue);
+         color: var(--dark-blue);
 
      }
     nav img{
         position: relative;
-        padding-top: 15%;
+        top: 5%;
         left: 20%;
     }
     #hamburger img {
         
         left: 70%;
-        top: 40%;
+        top: 25%;
+        
     }
-   
+    #menu_list{
+        height: 50%;
+        position: absolute;
+        
+        top: 20%;
+        width: 100%;
+
+    }
     .hidden{
         display: none;
         position: absolute;
@@ -195,22 +206,22 @@ li a {
      #hamburger #faceleft {
         top: 5%;
         padding-top: 0px;
-        left: 0%;
-        height: 40px;
+        left: 5%;
+        height: 10%
      }
 
      #hamburger #faceright {
         left: 55%;
-        top: 70%;
-        height: 80px;
+        top: 75%;
+        height: 20%;
      }
 
      #hamburger #exit {
-        left: 80%;
-        top: 5%;
+        left: 84%;
+        top: 4%;
         padding: 0;
-         
+        width: 30px;
      }
-
+    
      
  }
