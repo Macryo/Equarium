@@ -133,6 +133,5 @@ module.exports = {
     currentSlide,
     handleTouchEnd,
     handleTouchMove,
-    handleTouchStart,
-    startingX  
+    handleTouchStart
 };

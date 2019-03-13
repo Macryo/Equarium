@@ -7,23 +7,20 @@ import {
   handleTouchMove,
   handleTouchStart
 } from './slider';
+import {MeetUsMobileBehavior, MeetUsDesktopBehavior} from './meetus';
 import VanillaTilt from 'vanilla-tilt';
 
-
-// function component() {
-//   let element = document.createElement('div');
-//   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-//   return element;
-// }
+// media queries variables//
+var x = window.matchMedia("(max-width: 480px)")
+var z = window.matchMedia("(min-width: 481px)")
+// media queries variables//
 
 
-
-// slider functionality
-
+// slider functionality//
 document.querySelector('#dot1').addEventListener('click', function(){currentSlide(1)});
 document.querySelector('#dot2').addEventListener('click', function(){currentSlide(2)});
 document.querySelector('#dot3').addEventListener('click', function(){currentSlide(3)});
-var x = window.matchMedia("(max-width: 480px)")
+
 isMobile(x) // Call listener function at run time
 x.addListener(isMobile) // Attach listener function on state changes
 let element = document.querySelector("#sliderImg1")
@@ -44,12 +41,23 @@ function isMobile(x) {
 document.getElementById('form').addEventListener('submit', validate);
 
 //contact form
+// slider functionality//
+
+
+//meetus functionality//
+MeetUsMobileBehavior(x) // Call listener function at run time
+x.addListener(MeetUsMobileBehavior) // Attach listener function on state changes
+
+MeetUsDesktopBehavior(z) // Call listener function at run time
+z.addListener(MeetUsDesktopBehavior) // Attach listener function on state changes
+//
 
 
 
 
 
-// document.querySelector('.HoverOver').style.color = "red";
+
+
 
 // document.querySelector('#sliderImg1').addEventListener('touchstart', handleTouchStart)
 // document.querySelector('#sliderImg1').addEventListener('touchmove', handleTouchMove)
