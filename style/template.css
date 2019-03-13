@@ -8,16 +8,18 @@
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-semibold);
     background-color: var(--dark-blue);
+    box-sizing: border-box;
     width: 55%;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0 10px 0;
+    
 }
 /* Applies in case of tiltes attached to right side */
 .template-title-right {
-    align-self: flex-end;
+    display: flex;
+    justify-self: flex-end;
 } 
 
 .grid-container {

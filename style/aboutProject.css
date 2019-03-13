@@ -1,15 +1,14 @@
 @import url("variables.css");
 
-#AboutProjectSection{
-    display: flex;
-    flex-direction: column;
-}
-
 #AboutProjectText {
     color: #000;
     font-family: var(--noto-font);
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-regular);
+}
+
+#AboutProjectSection :nth-child(1) {
+    display: flex;
 }
 
 #AboutProjectSection .grid-container :nth-child(1){
