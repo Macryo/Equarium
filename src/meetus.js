@@ -16,17 +16,19 @@ function more() {
 
 function MeetUsDesktopBehavior(z) {
     if (z.matches) { // If media query matches
-        try {
-            if (document.getElementById("meet_us_grid")){
-                document.getElementById("meet_us_grid").style.display = "grid";
-                document.getElementById("meetus_expand").remove();
-                document.getElementById("meetus_expand_button").remove();
-            }
-        } catch (error) {
-            console.error(error);
-            // expected output: ReferenceError: nonExistentFunction is not defined
-            // Note - error messages will vary depending on browser
-        }
+        
+       try {
+           
+               document.getElementById("meet_us_grid").style.display = "grid";
+               document.getElementById("meetus_expand").remove();
+               document.getElementById("meetus_expand_button").remove();
+           
+       } catch (error) {
+           console.error(error);
+           // expected output: ReferenceError: nonExistentFunction is not defined
+           // Note - error messages will vary depending on browser
+       }
+        
     }
 }
 
