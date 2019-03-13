@@ -7,17 +7,11 @@ import {
   handleTouchMove,
   handleTouchStart
 } from './slider';
-<<<<<<< HEAD
-import {MeetUsMobileBehavior, MeetUsDesktopBehavior} from './meetus';
-import VanillaTilt from 'vanilla-tilt';
-
-=======
 
 import mobileNav from './header';
 import { MeetUsMobileBehavior, MeetUsDesktopBehavior } from './meetus';
 import VanillaTilt from 'vanilla-tilt';
 
->>>>>>> develop
 // media queries variables//
 var x = window.matchMedia("(max-width: 480px)")
 var z = window.matchMedia("(min-width: 481px)")
@@ -29,11 +23,8 @@ document.querySelector('#dot1').addEventListener('click', function(){currentSlid
 document.querySelector('#dot2').addEventListener('click', function(){currentSlide(2)});
 document.querySelector('#dot3').addEventListener('click', function(){currentSlide(3)});
 
-<<<<<<< HEAD
-=======
 var element = document.querySelector("#sliderImg1")
 VanillaTilt.init(element);
->>>>>>> develop
 isMobile(x) // Call listener function at run time
 x.addListener(isMobile) // Attach listener function on state changes
 
@@ -60,7 +51,6 @@ function isMobile(x) {
     VanillaTilt.init(element);
   }
 }
-<<<<<<< HEAD
 // slider functionality
 
 // contact form 
@@ -68,9 +58,6 @@ function isMobile(x) {
 document.getElementById('form').addEventListener('submit', validate);
 
 //contact form
-=======
- 
->>>>>>> develop
 // slider functionality//
 
 
