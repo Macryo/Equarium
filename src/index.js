@@ -68,11 +68,42 @@ x.addListener(MeetUsMobileBehavior) // Attach listener function on state changes
 MeetUsDesktopBehavior(z) // Call listener function at run time
 z.addListener(MeetUsDesktopBehavior) // Attach listener function on state changes
 //
+//contact form temporary
+function submitForm(){
+  let formdata = {
+    email_address: `${document.getElementById("email").value}`,
+    status: "subscribed",
+    merge_fields: {
+      "LNAME": `${document.getElementById("name").value}`,
+      "EMAIL": `${document.getElementById("email").value}`,
+      "PHONE": `${document.getElementById("phone").value}`,
+      "MSG": `${document.getElementById("msg").value}`
+    }
+  }
+  let options = {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      'Authorization': 'Basic ' + btoa('username:a22fabc15bc8b7b55d8d2b231ca354a8-us20'),
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: JSON.stringify(formdata)
+  }
+  let req = new Request("https://us20.api.mailchimp.com/3.0/lists/9d7f544068/members", options)
 
+  fetch(req)
+    .then((response) => {
+      return response;
+    })
+    .then((j) => {
+      console.log(j)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+}
 
-
-
-
+document.getElementById("form").addEventListener('submit', submitForm)
 
 
 
