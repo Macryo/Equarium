@@ -19,13 +19,28 @@ export default function validate(e) {
     document.getElementById("errorMsg").style.display = 'flex';
     
 
-    for (let i = 0; i < FieldArray.length; i++) {
-        if (FieldArray[i].value == "") {
-            errorMsg.innerHTML = `Pole "${FieldArray[i].name}" nie może być puste`;
+    
+        if (FieldArray[0].value == "") {
+            errorMsg.innerHTML = `Pole "imię i nazwisko" nie może być puste`;
             e.preventDefault();
             return
         }
-    }
+        if (FieldArray[1].value == "") {
+            errorMsg.innerHTML = `Pole "email" nie może być puste`;
+            e.preventDefault();
+            return
+        }
+        if (FieldArray[2].value == "") {
+            errorMsg.innerHTML = `Pole "telefon" nie może być puste`;
+            e.preventDefault();
+            return
+        }
+        if (FieldArray[3].value == "") {
+            errorMsg.innerHTML = `Pole "wiadomość" nie może być puste`;
+            e.preventDefault();
+            return
+        }
+    
     if (!emailReg.test(email.value)) {
         errorMsg.innerHTML = `Nieprawidłowy adres email`;
        
