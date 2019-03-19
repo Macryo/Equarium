@@ -45,7 +45,7 @@ section{
     color: var(--green);
 }
 
-.grid-container {
+/* .grid-container {
     display: grid;
     grid-template-columns: auto auto;
     padding: 10px;
@@ -54,7 +54,7 @@ section{
 .grid-item {
     padding: 20px;
     text-align: center;
-}
+} */
 
 /* li{
     text-transform: uppercase;

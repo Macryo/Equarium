@@ -7,21 +7,55 @@
     font-weight: var(--font-weight-regular);
 }
 
+#AboutProjectSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr 2fr;
+    height: 100vh;
+    grid-template-areas: "title title"
+                         ".  ."
+                         "text  img"
+                         "contact ."
+                         ". .";
+}
+
+/* Title */
+
 #AboutProjectSection > :nth-child(1) {
-    /* Need to position it to the right. */
+    grid-area: title;
+    justify-self: flex-end;
+    align-self: flex-start;
+    width: 60%;
 }
 
-#AboutProjectSection .grid-container > :nth-child(1){
-    grid-row: 2;
+/* Text */
+
+#AboutProjectSection > :nth-child(2){
+    grid-area: text;
     text-align: left;
+    max-width: 60%;
+    margin: auto;
 }
 
-#AboutProjectSection .grid-container > :nth-child(2) {
-    height: 100%;
-    grid-row: 2;
+/* Image */
+
+#AboutProjectSection > :nth-child(3) {
+    grid-area: img;
+    margin: auto; 
+    
+
 }
 
-#AboutProjectSection .grid-container > :nth-child(3) {
-    grid-row: 3;
+#AboutProjectSection> :nth-child(3) img {
+    width: 75%;
+    height: auto;
+}
+
+/* Contact us */
+
+#AboutProjectSection > :nth-child(4) {
+    grid-area: contact;
+    justify-content: center;
+    width: 57%;
 }
 
