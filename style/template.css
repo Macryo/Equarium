@@ -77,11 +77,6 @@
 
 @media (min-width: 481px) and (max-width: 767px) {
 
-    .template-title,
-    .template-title-right {
-        font-size: var(--font-size-m);
-        padding: 10px;
-    }
 
 }
 
@@ -96,6 +91,6 @@
     .template-title,
     .template-title-right {
         font-size: var(--font-size-ms);
-        
+        width: 70%;
     }
 }
