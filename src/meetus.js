@@ -1,16 +1,16 @@
 function more() {
 
     if (document.getElementById("more").innerHTML === "więcej +") {
+
         document.getElementById("meet_us_grid").style.display = "grid";
         document.getElementById("more").innerHTML = "mniej -";
 
     } else {
-        if (document.getElementById("more").innerHTML === "mniej -") {
-            document.getElementById("meet_us_grid").style.display = "none";
-            document.getElementById("more").innerHTML = "więcej +";
-        }
+        
+        document.getElementById("meet_us_grid").style.display = "none";
+        document.getElementById("more").innerHTML = "więcej +";
+        
     }
-
 }
 
 
