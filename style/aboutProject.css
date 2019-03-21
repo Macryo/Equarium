@@ -1,13 +1,127 @@
 @import url("variables.css");
 
-#AboutProjectSection{
-    display: flex;
-    flex-direction: column;
-}
-
 #AboutProjectText {
     color: #000;
     font-family: var(--noto-font);
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-regular);
+}
+
+#AboutProjectSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr 2fr;
+    height: 100vh;
+    grid-template-areas: "title title"
+                         ".  ."
+                         "text  img"
+                         "contact ."
+                         ". .";
+}
+
+/* Title */
+
+#AboutProjectSection > :nth-child(1) {
+    grid-area: title;
+    justify-self: flex-end;
+    align-self: flex-start;
+    width: 60%;
+}
+
+/* Text */
+
+#AboutProjectSection > :nth-child(2){
+    grid-area: text;
+    text-align: left;
+    max-width: 60%;
+    margin: auto;
+}
+
+/* Image */
+
+#AboutProjectSection > :nth-child(3) {
+    grid-area: img;
+    margin: auto; 
+}
+
+#AboutProjectSection> :nth-child(3) img {
+    width: 75%;
+    height: auto;
+}
+
+/* Contact us */
+
+#AboutProjectSection > :nth-child(4) {
+    grid-area: contact;
+    justify-content: center;
+    width: 57%;
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #AboutProjectText{
+        font-size: var(--font-size-xs);
+    }
+    #AboutProjectSection > :nth-child(4){
+        width: 65%;
+        
+    }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 480px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #AboutProjectSection{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #AboutProjectSection> :nth-child(1){
+        order: 1;
+        align-self: flex-end;
+        width: 70%;
+        height: 45px;
+    
+    }
+
+    #AboutProjectSection> :nth-child(2) {
+        order: 2;
+        max-width: 80%;
+    }
+
+    #AboutProjectSection> :nth-child(3){
+        order: 4;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #AboutProjectSection> :nth-child(4){
+        order: 3;
+        align-self: left;
+        margin-bottom: 40px;
+    }
+
+
+
+    #AboutProjectText {
+        font-size: var(--font-size-s);
+    }
 }
