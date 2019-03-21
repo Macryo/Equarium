@@ -10,16 +10,25 @@ export default function mobileNav() {
     document.getElementsByClassName('hidden')[1].style.display = 'flex';
     document.getElementsByClassName('hidden')[2].style.display = 'flex';
 
-    document.getElementById("exit").addEventListener('click', function () {
-        document.getElementById('hamburger').style.height = '100%';
-        document.getElementById('hamburger').style.width = '100%';
-        document.getElementById('faceright').style.display = 'none';
-        document.getElementById('faceleft').style.display = 'none';
-        document.getElementById('exit').style.display = 'none';
-        document.getElementById('logo').style.left = "20%";
-        document.getElementById('hamburger').style.background = 'transparent';
-        document.getElementById('hambi').style.display = 'block'
-        document.getElementById('menu_list').style.display = 'none';
-    });
+    document.getElementById("exit").addEventListener('click', exit);
 
+    for(let i = 0; i < 6; i++){
+        document.getElementsByClassName('menu_child')[i].addEventListener('click', exit);
+    }
+    
+
+}
+
+
+
+function exit() {
+    document.getElementById('hamburger').style.height = '100%';
+    document.getElementById('hamburger').style.width = '100%';
+    document.getElementById('faceright').style.display = 'none';
+    document.getElementById('faceleft').style.display = 'none';
+    document.getElementById('exit').style.display = 'none';
+    document.getElementById('logo').style.left = "20%";
+    document.getElementById('hamburger').style.background = 'transparent';
+    document.getElementById('hambi').style.display = 'block'
+    document.getElementById('menu_list').style.display = 'none';
 }

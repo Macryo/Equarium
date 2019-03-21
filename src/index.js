@@ -25,11 +25,11 @@ document.querySelector('#dot3').addEventListener('click', function(){currentSlid
 
 var element = document.querySelector("#sliderImg1")
 VanillaTilt.init(element);
-isMobile(x) // Call listener function at run time
-x.addListener(isMobile) // Attach listener function on state changes
+mobileMediaQueryListener(x) // Call listener function at run time
+x.addListener(mobileMediaQueryListener) // Attach listener function on state changes
 
 
-function isMobile(x) {
+function mobileMediaQueryListener(x) {
   if (x.matches) { // If media query matches
     document.getElementById("sliderImg1").src = "../Images/Slider_placeholder/bg_mobile.png";
     document.getElementById("logo").src = "../Images/header_footer/logo_white_mobile.svg";
