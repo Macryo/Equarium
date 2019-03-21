@@ -175,7 +175,8 @@
         order: 1;
         align-self: flex-end;
         width: 80%;
-        height: 45px;
+        min-height: 45px;
+        margin-bottom: 20px;
     }
 
     /* List */
@@ -191,13 +192,15 @@
     /* Mouse over mentors */
     #MentorsAndStudents> :nth-child(3) {
         order: 3;
+        min-height: 60px;
     }
 
     /* Students title */
     #MentorsAndStudents> :nth-child(4) {
         order: 5;
         width: 80%;
-        height: 45px;
+        min-height: 45px;
+        margin-bottom: 30px;
     }
 
     /* Students p */
@@ -207,15 +210,17 @@
     }
     #MentorsAndStudents> :nth-child(5) {
         order: 6;
+        margin-bottom: 30px;
     }
     #MentorsAndStudents> :nth-child(6) {
         order: 7;
+        margin-bottom: 20px;
     }
 
     /* Mouse over students */
     #MentorsAndStudents> :nth-child(7) {
         order: 8;
-        
+        min-height: 60px;
     }
 
     /* Mentors image */ 
@@ -229,5 +234,6 @@
     #MentorsAndStudents hr{
         width: 50%;
         margin-left: 13%;
+        margin-bottom: 20px;
     }
 }
