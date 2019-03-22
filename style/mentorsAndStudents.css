@@ -2,7 +2,7 @@
 
 /* Setting up grid */
 
-#MentorsAndStudents {
+.MentorsAndStudents {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
@@ -11,20 +11,20 @@
 
 /* Mentors grid */
 
-#MentorsAndStudents > :nth-child(1){
+.MentorsAndStudents > :nth-child(1){
     grid-column: 1 / 3;
     grid-row: 1;
     width: 60%;
     justify-self: self-end;
 }
 
-#MentorsAndStudents > :nth-child(2) {
+.MentorsAndStudents > :nth-child(2) {
     grid-column: 2;
     grid-row: 3 / 5;
     margin: auto;
 }
 
-#MentorsAndStudents > :nth-child(3) {
+.MentorsAndStudents > :nth-child(3) {
     grid-column: 2;
     grid-row: 7;
     margin-left: 12%;
@@ -34,7 +34,7 @@
 
 /* Students part of grid */
 
-#MentorsAndStudents > :nth-child(4) {
+.MentorsAndStudents > :nth-child(4) {
     grid-column: 1;
     grid-row: 3;
     justify-self: flex-start;
@@ -42,7 +42,7 @@
     width: 100%;
 }
 
-#MentorsAndStudents > :nth-child(5) {
+.MentorsAndStudents > :nth-child(5) {
     grid-column: 1;
     grid-row: 5 / 7;
     font-family: var(--noto-font);
@@ -51,7 +51,7 @@
     text-align: left;
 }
 
-#MentorsAndStudents > :nth-child(6) {
+.MentorsAndStudents > :nth-child(6) {
     grid-column: 1;
     grid-row: 7;
     font-family: var(--noto-font);
@@ -61,7 +61,7 @@
     align-self: flex-end
 }
 
-#MentorsAndStudents > :nth-child(7) {
+.MentorsAndStudents > :nth-child(7) {
     grid-column: 1;
     grid-row: 8;
     justify-content: center;
@@ -72,7 +72,7 @@
 
 /* Images */
 
-#MentorsAndStudents > :nth-child(8){
+.MentorsAndStudents > :nth-child(8){
     grid-column: 2;
     grid-row: 8;
     justify-self: center;
@@ -80,12 +80,12 @@
 
 /* p */
 
-#MentorsAndStudents p {
+.MentorsAndStudents p {
     margin: auto;
     width: 54%;
 }
 
-#MentorsAndStudents hr {
+.MentorsAndStudents hr {
     color: var(--very-light-green);
     width: 15%;
     margin-left: 27%;
@@ -93,22 +93,22 @@
 
 /* List styling */
 
-#MentorsAndStudents > :nth-child(2) ul {
+.MentorsAndStudents > :nth-child(2) ul {
     font-family: var(--noto-font);
     font-weight: var(--font-weight-regular);
     font-size: var(--font-size-s);
     width: 60%;
     list-style-type: none;
 }
-#MentorsAndStudents > :nth-child(2) ul :before {
+.MentorsAndStudents > :nth-child(2) ul :before {
     content: '\2014';
     position: absolute;
     margin-left: -25px;
 }
-#MentorsAndStudents > :nth-child(2) ul li{
+.MentorsAndStudents > :nth-child(2) ul li{
     padding: 15px;
 }
-#MentorsAndStudents > :nth-child(2) ul :first-child {
+.MentorsAndStudents > :nth-child(2) ul :first-child {
     padding: 0 15px 15px 15px;
 }
 
@@ -120,25 +120,25 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
     
-    #MentorsAndStudents> :nth-child(2) ul {
+    .MentorsAndStudents> :nth-child(2) ul {
         margin: auto;
     }
 
-    #MentorsAndStudents> :nth-child(3) {
+    .MentorsAndStudents> :nth-child(3) {
         position: relative;
         left: 20px;
     }
 
-    #MentorsAndStudents> :nth-child(5) {
+    .MentorsAndStudents> :nth-child(5) {
         font-size: var(--font-size-xs);
     }
 
-    #MentorsAndStudents> :nth-child(6) {
+    .MentorsAndStudents> :nth-child(6) {
         position: relative;
         top: -40px;
     }
 
-    #MentorsAndStudents> :nth-child(7) {
+    .MentorsAndStudents> :nth-child(7) {
         position: relative;
         top: -40px;
         left: 20px;
@@ -163,7 +163,7 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
    
-    #MentorsAndStudents{
+    .MentorsAndStudents{
         display: flex;
         flex-direction: column;
     }
@@ -171,7 +171,7 @@
     /* Mentors */
 
     /* Mentors title */
-    #MentorsAndStudents> :nth-child(1) {
+    .MentorsAndStudents> :nth-child(1) {
         order: 1;
         align-self: flex-end;
         width: 80%;
@@ -180,23 +180,23 @@
     }
 
     /* List */
-    #MentorsAndStudents> :nth-child(2) {
+    .MentorsAndStudents> :nth-child(2) {
         order: 2;
     }
 
-    #MentorsAndStudents> :nth-child(2) ul {
+    .MentorsAndStudents> :nth-child(2) ul {
         margin: auto;
         font-size: var(--font-size-xs);
     }
 
     /* Mouse over mentors */
-    #MentorsAndStudents> :nth-child(3) {
+    .MentorsAndStudents> :nth-child(3) {
         order: 3;
         min-height: 60px;
     }
 
     /* Students title */
-    #MentorsAndStudents> :nth-child(4) {
+    .MentorsAndStudents> :nth-child(4) {
         order: 5;
         width: 80%;
         min-height: 45px;
@@ -205,33 +205,33 @@
 
     /* Students p */
 
-    #MentorsAndStudents p{
+    .MentorsAndStudents p{
         width: 75%;
     }
-    #MentorsAndStudents> :nth-child(5) {
+    .MentorsAndStudents> :nth-child(5) {
         order: 6;
         margin-bottom: 30px;
     }
-    #MentorsAndStudents> :nth-child(6) {
+    .MentorsAndStudents> :nth-child(6) {
         order: 7;
         margin-bottom: 20px;
     }
 
     /* Mouse over students */
-    #MentorsAndStudents> :nth-child(7) {
+    .MentorsAndStudents> :nth-child(7) {
         order: 8;
         min-height: 60px;
     }
 
     /* Mentors image */ 
-    #MentorsAndStudents> :nth-child(8) {
+    .MentorsAndStudents> :nth-child(8) {
         order: 4;
         display: flex;
         align-self: flex-end;
         margin: 0 20px 20px 0;
     }
 
-    #MentorsAndStudents hr{
+    .MentorsAndStudents hr{
         width: 50%;
         margin-left: 13%;
         margin-bottom: 20px;
