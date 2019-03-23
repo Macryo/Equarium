@@ -121,7 +121,7 @@ li a {
          height: 15%;
      }
       nav {
-        left: 2%;
+        padding-left: 2%;
         grid-template-columns: 2fr 9fr;
 
       }
