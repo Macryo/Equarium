@@ -6,10 +6,10 @@ export default function validate(e) {
     let name = document.getElementById("name")
 
     let email = document.getElementById("email")
-    let emailReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    // let emailReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     let phone = document.getElementById("phone")
-    let phoneReg = /(?<!\w)(\(?(\+|00)?48\)?)?[ -]?\d{3}[ -]?\d{3}[ -]?\d{3}(?!\w)/
+    // let phoneReg = /(?<!\w)(\(?(\+|00)?48\)?)?[ -]?\d{3}[ -]?\d{3}[ -]?\d{3}(?!\w)/
 
     let msg = document.getElementById("msg")
 
@@ -41,14 +41,14 @@ export default function validate(e) {
             return
         }
     
-    if (!emailReg.test(email.value)) {
-        errorMsg.innerHTML = `Nieprawidłowy adres email`;
+    // if (!emailReg.test(email.value)) {
+    //     errorMsg.innerHTML = `Nieprawidłowy adres email`;
        
-    }
-    else if (!phoneReg.test(phone.value)) {
-        errorMsg.innerHTML = `Nieprawidłowy numer telefonu, przykladowy numer to "111222333"`;  
+    // }
+    // else if (!phoneReg.test(phone.value)) {
+    //     errorMsg.innerHTML = `Nieprawidłowy numer telefonu, przykladowy numer to "111222333"`;  
        
-    }
+    // }
     else if (name.value.length < 5 || name.value.length > 50) {
         errorMsg.innerHTML = `Nieprawidłowe imię i nazwisko`;
        

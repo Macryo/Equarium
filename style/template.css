@@ -31,15 +31,6 @@
     height: 90vh;
 }
 
-.grid-item {
-    /* display: flex;
-    align-self: center;
-    max-width: 60%; */
-
-}
-
-
-
 .Mouse-over-it {
     font-family: var(--noto-font);
     font-size: var(--font-size-xs);
