@@ -17,9 +17,75 @@
     grid-column-gap: 10px;
     padding: 20px;
     max-height: none;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+/* mobile hide / show style */
+#meetus_expand {
+    width: 80%; 
+    height: 130px;
+    text-align: center;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 10%;
+    border: lightgray solid 1px;
+}
+
+#meetus_expand p:first-child{
+    display: flex;
+    align-self: center;
+    font-family: var(--oswald-font);
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-bold);
+    padding-top: 5%;
+    
+}
+
+#meetus_expand p {
+    display: flex;
+    align-self: center;
+    font-family: var(--noto-font);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--dark-blue);
+    padding-top: 5%;
+}
+#meetus_expand_button {
+    width: 80%;
+    height: 70px;
+    background-color: var(--very-light-green);
+    position: relative;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    border-left: lightgray solid 1px;
+    border-right: lightgray solid 1px;
+    border-bottom: lightgray solid 1px;
+
+}
+
+#meetus_expand_button:hover {
+    background-color: var(--light-green)
+}
+
+#meetus_expand_button p{
+    
+    text-align: center;
+    line-height: 70px;
+    font-family: var(--noto-font);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-semibold);
+    color: black;
+    width: 100%;
     
     
 }
+
+/* mobile hide / show style */
 
 /* styling for each person */
 .meet_us_person {
@@ -44,25 +110,12 @@
 }
 
 .meet_us_person:hover{
-    background-color: var(--light-green);
+    background-color: var(--very-light-green);
 }
-
-.meet_us_person:hover .meet_us_img_bottom {
-    opacity: 0;
-}
-
-.meet_us_person:hover .meet_us_img_top {
-    display: inline-block;
-}
-
 
 .meet_us_person img{
-    max-height:  200px;
+    max-height:  180px;
     padding-bottom: 10px;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    -o-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
 }
 
 .meet_us_person .meet_us_img_bottom {
@@ -72,13 +125,6 @@
     justify-self: center;
 }
 
-.meet_us_person .meet_us_img_top {
-    grid-area: img;
-    display: flex;
-    border-radius: 50%;
-    justify-self: center;
-    display:none;
-}
 
 .meet_us_person .meet_us_text1 {
     grid-area: textBig;
@@ -92,6 +138,9 @@
     text-align: center;
     font-family: var(--noto-font);
     font-size: var(--font-size-s);
+    display: flex;
+    align-self: center;
+    justify-self: center;
 }
 
 .meet_us_person .meet_us_messenger {
@@ -99,8 +148,9 @@
     justify-self: center;
     align-self: center;
     grid-area: messenger;
-    transform: scale(0.7);
+    transform: scale(0.6);
     transition: transform .2s;
+    padding-bottom: 0;
 }
 
 .meet_us_person .meet_us_messenger:hover {  
@@ -110,10 +160,11 @@
 
 .meet_us_person .meet_us_envelope {
     grid-area: envelope;
-    transform: scale(0.7);
+    transform: scale(0.6);
     justify-self: center;
     align-self: center;
     transition: transform .2s;
+    padding-bottom: 0;
 }
 
 .meet_us_person .meet_us_envelope:hover {
@@ -147,6 +198,8 @@
 
      #meet_us_grid {  
          grid-template-columns: 1fr 1fr;
+         margin-left: 0px;
+         margin-right: 0px;
 
      }
      .meet_us_person {
@@ -190,6 +243,8 @@
     #meet_us_grid {    
         grid-template-columns: 1fr;
         height: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .meet_us_person img {
         max-height: 150px;
@@ -208,5 +263,12 @@
 
         font-size: var(--font-size-xs);
     }
+    .meet_us_person .meet_us_messenger {
+        
+        padding-bottom: 10px;
+    }
+    .meet_us_person .meet_us_envelope {
 
+        padding-bottom: 10px;
+    }
 }
