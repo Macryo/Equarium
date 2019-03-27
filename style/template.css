@@ -1,6 +1,10 @@
 @import url("variables.css");
 
+section {
+    margin-top: 80px;
+}
 /* Applies styling to tiltes */
+
 .template-title,
 .template-title-right {
     color: var(--very-light-green);
