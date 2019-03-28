@@ -17778,13 +17778,14 @@ function validate(e) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return mobileNav; });
+var hamburger = document.getElementById('hamburger');
+var hambi = document.getElementById('hambi');
+var menu_list = document.getElementById('menu_list');
 function mobileNav() {
-  document.getElementById('hamburger').style.height = '100vh';
-  document.getElementById('hamburger').style.width = '100vw';
+  hamburger.style = " height: 100vh; width: 100vw; background: var(--dark-blue)";
+  hambi.style.display = 'none';
+  menu_list.style.display = 'flex';
   document.getElementById('logo').style.left = "0%";
-  document.getElementById('hamburger').style.background = 'var(--dark-blue)';
-  document.getElementById('hambi').style.display = 'none';
-  document.getElementById('menu_list').style.display = 'flex';
   document.getElementsByClassName('hidden')[0].style.display = 'flex';
   document.getElementsByClassName('hidden')[1].style.display = 'flex';
   document.getElementsByClassName('hidden')[2].style.display = 'flex';
@@ -17796,15 +17797,15 @@ function mobileNav() {
 }
 
 function exit() {
-  document.getElementById('hamburger').style.height = '100%';
-  document.getElementById('hamburger').style.width = '100%';
+  hamburger.style.height = '100%';
+  hamburger.style.width = '100%';
   document.getElementById('faceright').style.display = 'none';
   document.getElementById('faceleft').style.display = 'none';
   document.getElementById('exit').style.display = 'none';
   document.getElementById('logo').style.left = "20%";
-  document.getElementById('hamburger').style.background = 'transparent';
-  document.getElementById('hambi').style.display = 'block';
-  document.getElementById('menu_list').style.display = 'none';
+  hamburger.style.background = 'transparent';
+  hambi.style.display = 'block';
+  menu_list.style.display = 'none';
 }
 
 /***/ }),
@@ -17965,7 +17966,7 @@ var sliderTimeout;
 showSlides(slideIndex);
 
 function changeSlide(n) {
-  if (sliderTimeout !== undefined) {
+  if (sliderTimeout) {
     clearTimeout(sliderTimeout);
   }
 
@@ -17977,7 +17978,7 @@ function plusSlides(n) {
 }
 
 function currentSlide(n) {
-  if (sliderTimeout !== undefined) {
+  if (sliderTimeout) {
     clearTimeout(sliderTimeout);
   }
 
@@ -18014,30 +18015,30 @@ function showSlides(n) {
 
 var startingX;
 
-function handleTouchStart(evt) {
-  startingX = evt.touches[0].clientX;
+function handleTouchStart(e) {
+  startingX = e.touches[0].clientX;
 }
 
-function handleTouchMove(evt) {
-  var touch = evt.touches[0];
+function handleTouchMove(e) {
+  var touch = e.touches[0];
   var change = startingX - touch.clientX;
 
   if (change <= 0) {
     return;
   }
 
-  evt.preventDefault();
+  e.preventDefault();
 }
 
-function handleTouchEnd(evt) {
-  var change = startingX - evt.changedTouches[0].clientX;
+function handleTouchEnd(e) {
+  var change = startingX - e.changedTouches[0].clientX;
   var threshold = screen.width / 3;
 
   if (change < threshold) {
-    if (startingX == evt.changedTouches[0].clientX) {
+    if (startingX == e.changedTouches[0].clientX) {
       var dots = document.getElementsByClassName("dot");
 
-      switch (evt.path[0].id) {
+      switch (e.path[0].id) {
         case "sliderImg1":
           dots[1].style.backgroundColor = "white";
           dots[2].style.backgroundColor = "white";
@@ -18060,10 +18061,10 @@ function handleTouchEnd(evt) {
       changeSlide(-1);
     }
   } else if (change > threshold) {
-    if (startingX == evt.changedTouches[0].clientX) {
+    if (startingX == e.changedTouches[0].clientX) {
       var dots = document.getElementsByClassName("dot");
 
-      switch (evt.path[0].id) {
+      switch (e.path[0].id) {
         case "sliderImg1":
           dots[1].style.backgroundColor = "white";
           dots[2].style.backgroundColor = "white";
