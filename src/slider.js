@@ -4,7 +4,7 @@ var sliderTimeout;
 showSlides(slideIndex);
 
 function changeSlide(n) {
-    if (sliderTimeout !== undefined) {
+    if (sliderTimeout) {
         clearTimeout(sliderTimeout);
     }
     plusSlides(n);
@@ -15,7 +15,7 @@ function plusSlides(n) {
 }
 
 function currentSlide(n) {
-    if (sliderTimeout !== undefined) {
+    if (sliderTimeout) {
         clearTimeout(sliderTimeout);
     }
     showSlides(slideIndex = n);
@@ -47,28 +47,28 @@ function showSlides(n) {
 
 let startingX;
 
-function handleTouchStart(evt) {
-    startingX = evt.touches[0].clientX;
+function handleTouchStart(e) {
+    startingX = e.touches[0].clientX;
 }
 
-function handleTouchMove(evt) {
-    let touch = evt.touches[0];
+function handleTouchMove(e) {
+    let touch = e.touches[0];
     let change = startingX - touch.clientX;
 
     if (change <= 0) {
         return;
     }
-    evt.preventDefault();
+    e.preventDefault();
 }
 
-function handleTouchEnd(evt) {
-    let change = startingX - evt.changedTouches[0].clientX;
+function handleTouchEnd(e) {
+    let change = startingX - e.changedTouches[0].clientX;
     let threshold = screen.width / 3;
 
     if (change < threshold) {
-        if (startingX == evt.changedTouches[0].clientX) {
+        if (startingX == e.changedTouches[0].clientX) {
             var dots = document.getElementsByClassName("dot");
-            switch (evt.path[0].id) {
+            switch (e.path[0].id) {
                 case "sliderImg1":
                     dots[1].style.backgroundColor = "white";
                     dots[2].style.backgroundColor = "white";
@@ -94,9 +94,9 @@ function handleTouchEnd(evt) {
 
     } else if (change > threshold) {
 
-        if (startingX == evt.changedTouches[0].clientX) {
+        if (startingX == e.changedTouches[0].clientX) {
             var dots = document.getElementsByClassName("dot");
-            switch (evt.path[0].id) {
+            switch (e.path[0].id) {
 
                 case "sliderImg1":
                     dots[1].style.backgroundColor = "white";

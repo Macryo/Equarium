@@ -3,7 +3,7 @@
 /* home section styling */
 #home{
     height: 100vh;
-    
+    margin-top: 0;
     font-family: var(--oswald-font)
 }
  .mySlides {
@@ -28,6 +28,8 @@
      fill: currentColor;
 
  }
+
+
 
  /* Slideshow container */
  .slideshow-container {  
@@ -121,6 +123,14 @@
   ##Device = Laptops, Desktops
   ##Screen = B/w 1024px to 1280px
 */
+  @media (min-width: 1281px) {
+
+     #sliderImg1 {
+        position: relative;
+        bottom: 70px;
+     }
+
+  }
 
  @media (min-width: 1024px) and (max-width: 1280px) {
 

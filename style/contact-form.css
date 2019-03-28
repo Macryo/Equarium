@@ -96,6 +96,7 @@
     background-color: var(--very-light-green);
     border:none;
     width: 100%;
+    min-height: 60px;
     font-family: var(--noto-font);
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-regular);
@@ -300,7 +301,7 @@
     }
     #form_child_left form input[type=submit] {
         
-        min-height: 25px;
+        min-height: 60px;
     }
     #errorMsg {
         
