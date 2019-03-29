@@ -6,6 +6,16 @@
     
 }
 
+.privacy-policy {
+    font-size: 11px;
+    color: grey;
+}
+
+#privacy-policy{
+    color: var(--blue);
+    text-decoration: none;
+}
+
 #form_container{
     width: 100%;
     margin-bottom: 5%;
