@@ -8,7 +8,9 @@
     align-content: center;
     justify-content: center;
 }
-
+#template-title-right {
+    align-self: flex-end;
+}
 #meet_us_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
