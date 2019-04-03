@@ -166,6 +166,8 @@
     .MentorsAndStudents{
         display: flex;
         flex-direction: column;
+        max-height: none;
+        height: auto;
     }
 
     /* Mentors */
@@ -211,6 +213,7 @@
     .MentorsAndStudents> :nth-child(5) {
         order: 6;
         margin-bottom: 30px;
+        font-size: calc(var(--font-size-s) - 3px);
     }
     .MentorsAndStudents> :nth-child(6) {
         order: 7;
