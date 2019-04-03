@@ -22,7 +22,7 @@
     width: 100%;
     min-height: 400px;
     min-width: 300px;
-    border: solid 1px black;
+    border: solid 0.5px grey;
     font-family: var(--noto-font);
     font-weight: var(--font-weight-regular);
     justify-items: center;
@@ -30,13 +30,17 @@
 
 .update-article-container:nth-child(2) {
     grid-area: article2;
-    border-left: 0px;
+  
    
+}
+
+.update-article-container:hover {
+    background: var(--very-light-green);
 }
 
 .update-article-container:nth-child(3) {
     grid-area: article3;
-    border-left: 0px;
+    
    
 }
 
