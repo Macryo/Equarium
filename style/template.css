@@ -91,5 +91,6 @@ section {
     .template-title-right {
         font-size: var(--font-size-ms);
         width: 70%;
+        height: 45px;
     }
 }

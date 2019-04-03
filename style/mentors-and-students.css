@@ -168,6 +168,7 @@
         flex-direction: column;
         max-height: none;
         height: auto;
+        margin-top: 0;
     }
 
     /* Mentors */
@@ -178,7 +179,7 @@
         align-self: flex-end;
         width: 80%;
         min-height: 45px;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
     }
 
     /* List */
@@ -188,13 +189,17 @@
 
     .MentorsAndStudents> :nth-child(2) ul {
         margin: auto;
-        font-size: var(--font-size-xs);
+        font-size: calc(var(--font-size-xs) + 3px);
     }
 
     /* Mouse over mentors */
     .MentorsAndStudents> :nth-child(3) {
         order: 3;
         min-height: 60px;
+        margin: 20px 0 10px 0;
+        justify-content: center;
+        width: 63.5%;
+
     }
 
     /* Students title */
@@ -231,7 +236,7 @@
         order: 4;
         display: flex;
         align-self: flex-end;
-        margin: 0 20px 20px 0;
+        margin: 0 20px 80px 0;
     }
 
     .MentorsAndStudents hr{
