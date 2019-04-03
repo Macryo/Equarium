@@ -32,6 +32,10 @@
 
 }
 
+.sign-in-redirect-btn {
+	margin-left: 15px;
+}
+
 /* Students part of grid */
 
 .MentorsAndStudents > :nth-child(4) {
