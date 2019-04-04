@@ -74,9 +74,15 @@
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
+    .GoalOfTheProjectSection{
+        height: auto;
+        max-height: none;
+    }
+
     .GoalOfTheProjectSection .grid-container {
         display: flex;
         flex-direction: column;
+        height: auto;
     }
 
     .GoalOfTheProjectSection > :nth-child(1){
@@ -84,9 +90,11 @@
         height: 45px;
         margin-bottom: 30px;
     }
+    /* Image */
     .GoalOfTheProjectSection .grid-container> :nth-child(1){
         order: 4;
         margin-top: 90px;
+        margin-bottom: 40px;
     }
     .GoalOfTheProjectSection .grid-container> :nth-child(2){
         order: 1;
