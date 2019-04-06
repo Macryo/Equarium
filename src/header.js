@@ -1,9 +1,21 @@
 let hamburger = document.getElementById('hamburger');
 let hambi = document.getElementById('hambi');
 let menu_list = document.getElementById('menu_list');
+let vh = window.innerHeight * 0.01;
+let vw = window.innerWidth * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.addEventListener('resize', () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    let vw = window.innerWidth * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    document.documentElement.style.setProperty('--vw', `${vw}px`);
+});
+
 
 export default function mobileNav() {
-    hamburger.style=" height: 100vh; width: 100vw; background: var(--dark-blue)";
+    hamburger.style = " height: calc(var(--vh, 1vh) * 100); width: 100vw; min-width: 320px; background: var(--dark-blue)";
     hambi.style.display = 'none'
     menu_list.style.display = 'flex';
     document.getElementById('logo').style.left = "0%";
@@ -22,6 +34,7 @@ export default function mobileNav() {
 function exit() {
     hamburger.style.height = '100%';
     hamburger.style.width = '100%';
+    hamburger.style.minWidth = '0';
     document.getElementById('faceright').style.display = 'none';
     document.getElementById('faceleft').style.display = 'none';
     document.getElementById('exit').style.display = 'none';

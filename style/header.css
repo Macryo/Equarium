@@ -16,7 +16,7 @@ nav {
     display: grid;
     grid-template-columns: 5fr 7fr;
     position: fixed;
-    max-width: 100%;
+    max-width: 100vw;
     background: white;
     z-index: 1;
    
@@ -61,6 +61,7 @@ li a {
 }
 
 #hambi{
+    position: absolute;
     padding: 10px;
 }
 #hamburger{
@@ -144,6 +145,7 @@ li a {
         
         width: 100%;
     }
+   
     nav ul {
         padding-top: 10px;
         display: none;

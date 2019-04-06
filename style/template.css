@@ -46,6 +46,11 @@ section {
     align-items: center;
 }
 
+.Mouse-over-it a {
+    color: black;
+    text-decoration: none;
+    
+}
 
 .Mouse-over-it span {
     display: flex;
@@ -54,7 +59,6 @@ section {
 }
 
 .Mouse-over-it:hover {
-
     background-color: var(--very-light-green);
 }
 
@@ -87,5 +91,6 @@ section {
     .template-title-right {
         font-size: var(--font-size-ms);
         width: 70%;
+        height: 45px;
     }
 }

@@ -6,6 +6,16 @@
     
 }
 
+.privacy-policy {
+    font-size: 11px;
+    color: grey;
+}
+
+#privacy-policy{
+    color: var(--blue);
+    text-decoration: none;
+}
+
 #form_container{
     width: 100%;
     margin-bottom: 5%;
@@ -255,10 +265,23 @@
         
     }
 
+    .privacy-policy {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+    }
+
+    .mc-field-group{
+        width: 80%;
+        display: flex;
+        justify-self: center;
+    }
+
     #form_child_right {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;   
+        justify-content: center;
         font-size: var(--font-size-s);
         height: auto;
         
@@ -274,7 +297,7 @@
 
         display: flex;
         align-self: center;
-        padding-left: 0%;
+        padding-left: 30px;
         
 
     }
@@ -282,26 +305,27 @@
     #form_child_right p:nth-of-type(2) {
 
         align-self: center;
-        padding-left: 0%;
+        padding-left: 30px;
     }  
     #form_child_right i {
         position: relative;
-        top: 20px;
-        left: 18%;
+        top: 25px;
+        left: 40px;
         max-width: 50px;
 
     }
     #form_child_right i:nth-of-type(2) {
         position: relative;
         top: 20px;
-        left: 18%;
+        left: 40px;
         max-width: 50px;
         
 
     }
     #form_child_left form input[type=submit] {
-        
+        width: 80%;
         min-height: 60px;
+
     }
     #errorMsg {
         

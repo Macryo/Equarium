@@ -7,10 +7,13 @@ import {
   handleTouchMove,
   handleTouchStart
 } from './slider';
-
 import mobileNav from './header';
 import { MeetUsMobileBehavior, MeetUsDesktopBehavior } from './meetus';
 import VanillaTilt from 'vanilla-tilt';
+//scroll animation
+import AOS from 'aos';
+AOS.init();
+//scroll animation
 
 // media queries variables//
 var x = window.matchMedia("(max-width: 480px)")

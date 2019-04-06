@@ -13,10 +13,9 @@
     <link rel="stylesheet" href="../style/goal-of-the-project.css">
     <link rel="stylesheet" href="../style/mentors-and-students.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:500,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- font awesome link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    
-
   </head>
   <body>
     <div class = "main-container">
@@ -80,7 +79,7 @@
       
 
 <!--About project-->
-  <section class="AboutProjectSection">
+  <section class="AboutProjectSection" data-aos="fade-up">
     <div class="template-title-right">O projekcie</div>
     <div class="grid-item">
       <p class="AboutProjectText">
@@ -102,7 +101,7 @@
       
 
 <!--Goals of the project-->
-  <section class="GoalOfTheProjectSection">
+  <section class="GoalOfTheProjectSection" data-aos="fade-up">
     <div class="template-title">Cele projektu</div>
     <div class="grid-container">
       <div class="grid-item"> 
@@ -136,7 +135,7 @@
 
 
 <!--For mentors and students-->
-  <section class="MentorsAndStudents">
+  <section class="MentorsAndStudents" data-aos="fade-up">
     <div class="template-title-right">Mentorzy</div>
     <div> 
       <ul>
@@ -147,7 +146,7 @@
       </ul>
     </div>
     <div class="Mouse-over-it"> 
-      <a href="#">Zgłoś się </a> <span>&#8594;</span>
+      <a class="sign-in-redirect-btn" href="#">Zgłoś się </a> <span>&#8594;</span>
     </div>
     <div class="template-title">Studenci</div>
     <div>
@@ -180,7 +179,7 @@
 
 <!-- section meet us -->
 
-      <section id="meet_us">
+      <section id="meet_us" data-aos="fade-up">
         <div class="template-title-right" id="template-title-right">Poznaj nas</div>
         <div id="meet_us_grid">
           <div class="meet_us_person">
@@ -237,7 +236,7 @@
 
 <!-- section contact form -->
 
-<section id="contact_form">
+<section id="contact_form" data-aos="fade-up">
   <div class="template-title-right">Kontakt</div>
   <div id="form_container">
     <!-- <div id="form_child_left">
@@ -286,6 +285,10 @@
             <label for="msg">Wiadomość </label>
             <input type="text" value="" name="MSG" class="" id="msg">
           </div>
+          <div class="privacy-policy">
+            Klikając "Wyślij" wyrażasz zgodę na przetwarzanie twoich danych przez organizację Equarium,
+            w celach marketingowych i kontaktu. Po więcej szczegułów zajrzyj do <a href="/dist/privacy-policy.html" id="privacy-policy">Polityka Prywatności</a>
+          </div>
           
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
@@ -333,6 +336,7 @@
        -->
     </div>
     <script src="main.js"></script>
+
     
   </body>
 </html>
