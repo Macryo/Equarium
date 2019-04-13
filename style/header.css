@@ -40,6 +40,7 @@ nav img {
 li a {
     color: black;
     text-decoration: none;
+    
 }
 
 .hoverNav::after {
