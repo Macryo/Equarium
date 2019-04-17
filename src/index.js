@@ -31,7 +31,6 @@ VanillaTilt.init(element);
 mobileMediaQueryListener(x) // Call listener function at run time
 x.addListener(mobileMediaQueryListener) // Attach listener function on state changes
 
-
 function mobileMediaQueryListener(x) {
   if (x.matches) { // If media query matches
     document.getElementById("sliderImg1").src = "../Images/Slider_placeholder/bg_mobile.png";
