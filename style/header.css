@@ -148,11 +148,9 @@ header nav ul li a:hover {
         font-size: 21px;
         text-decoration: none;
         font-family: var(--oswald-font);
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
     }
+    
      header nav ul li {
         display: flex;
         justify-content: center;
@@ -165,21 +163,20 @@ header nav ul li a:hover {
         width: 100%;
     }
    
-    .hoverNav::after {
+    header nav ul li a.hoverNav::after {
         content: "";
         display: block;
         width: 0;
         height: 2px;
-        background: blue;
-        transition: all .3s;
+        background: var(--dark-blue);
+        transition: width .3s;
         padding-top: 2px;
         
 
     }
 
-    .hoverNav:hover::after {
+    header nav ul li a.hoverNav:hover::after {
         width: 100%;
-        font-size: 40px;
         transition: width .3s;
 
     }
@@ -193,6 +190,24 @@ header nav ul li a:hover {
         
         position: absolute;
         left: 10%;
+
+    }
+    .hoverNav::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: blue;
+        transition: all .3s;
+        padding-top: 2px;
+
+
+    }
+
+    .hoverNav:hover::after {
+        width: 100%;
+        font-size: 40px;
+        transition: width .3s;
 
     }
 
