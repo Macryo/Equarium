@@ -1,46 +1,108 @@
-@import url("variables.css");
-
-.main-container{
-    position: relative;
-    min-height: 100vh;
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: var(--dark-blue);
+}
+.hidden{
+    display: none;
 }
 
-/* properties for every section */
-section{
-    /* according to mockup each section ought to have height and width of a screen */
-    max-height: 100vh;
-    max-width: 100vw;
+.expandNav{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dark-blue);
 }
+
 
 nav {
     display: grid;
-    grid-template-columns: 5fr 7fr;
-    position: fixed;
-    max-width: 100vw;
-    background: white;
-    z-index: 1;
+    height: 70px;
+    grid-template-columns: 2fr 5fr;
+    align-items: center;
+    position: relative;
+
+}
+
+header .logo{
+    width: 180px;
+    position: relative;
+    left: 30px;
    
+}
+header .hambi{
+    height: 100%;
+    width: 30px;
+    display: flex;
+    position: absolute;
+    right: 20px;
+}
+
+header .exit{
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    
+}
+header nav .face-left{
+    position: absolute;
+    height: 100px;
+    width: auto;
+    bottom: 20px;
+    right: -10px;
+}
+
+header nav .face-right {
+    position: absolute;
+    height: 60px;
+    width: auto;
+    top: 5%;
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Oswald, sans-serif;
+    height: 100%;
     width: 100%;
 }
 
-nav ul {
-    display: flex;
+nav ul li{
+    width: 100%;
+    text-align: center;
     position: relative;
-    justify-content: space-evenly;
-    align-items: center;
-    font-family: var(--oswald-font);
-    font-size: var(--font-size-s);
+    top: 10px;
     height: 70px;
-}
-nav img {
     display: flex;
-    align-self: center;
-    justify-self: center;
+    align-items: center;
+    justify-content: center;
 }
-li a {
-    color: black;
+
+
+
+header nav ul li a {
     text-decoration: none;
+    color: white;
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left:50px;
     
+}
+
+header nav ul li a:hover {
+    background: var(--very-light-green);
+    color: var(--dark-blue);
 }
 
 .hoverNav::after {
@@ -50,8 +112,8 @@ li a {
     height: 2px;
     background: var(--dark-blue);
     transition: width .3s;
-    margin-top: 1px;
-    padding-top: 3px;
+    padding-top: 2px;
+    margin-top: 3px;
 
 }
 
@@ -61,176 +123,4 @@ li a {
 
 }
 
-#hambi{
-    position: absolute;
-    padding: 10px;
-}
-#hamburger{
-    position: relative;
-    
-}
 
-
-#menu_list{
-    
-    flex-direction: column;
-    position: relative;
-    top: 35%;
-
-}
-
-#menu_list li{
-    padding-top: 15px;
-    text-align: start;
-}
-#menu_list li a{
-    display: flex;
-    align-self: flex-start;
-}
-
- @media (min-width: 768px) and (max-width: 1023px) {
-
-    nav ul {
-        
-        font-family: var(--oswald-font);
-        font-size: var(--font-size-xs);
-        
-    }
-     #logo {
-         height: 30%;
-     }
-     nav {
-         
-         grid-template-columns: 3fr 8fr;
-        
-     }
- }
-
- /* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-
- @media (min-width: 481px) and (max-width: 767px) {
-
-     nav ul {
-
-         font-family: var(--oswald-font);
-         font-size: 13px;
-
-     }
-     #logo{
-         height: 15%;
-     }
-      nav {
-        padding-left: 2%;
-        grid-template-columns: 2fr 9fr;
-
-      }
- }
-
- /* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-
- @media (min-width: 319px) and (max-width: 480px) {
-    nav {
-        display: grid;
-        grid-template-columns: 5fr 7fr;
-        position: fixed;
-        height: 8%;
-        background-color: var(--dark-blue);
-        
-        z-index: 1;
-        
-        width: 100%;
-    }
-   
-    nav ul {
-        padding-top: 10px;
-        display: none;
-        position: relative;
-        justify-content: space-evenly;
-        align-items: center;
-        font-family: var(--oswald-font);
-        font-size: var(--font-size-s);
-        height: 70px;
-    }
-    nav ul li{
-
-        display: grid;
-        padding-left: 20%;
-        align-self: start;
-        width: 100%;
-        
-    }
-    nav ul li a{
-        display: flex;
-        color: white;
-        align-self: center;
-        
-        padding-bottom: 15px;
-        font-size: var(--font-size-ms)
-
-    }
-
-    nav ul li:hover {
-       background: var(--very-light-green);
-       
-    }
-     nav ul li:hover a{
-         color: var(--dark-blue);
-
-     }
-    nav img{
-        position: relative;
-        top: 5%;
-        left: 20%;
-    }
-    #hamburger img {
-        
-        left: 70%;
-        top: 25%;
-        
-    }
-    #menu_list{
-        height: 50%;
-        position: absolute;
-        
-        top: 20%;
-        width: 100%;
-
-    }
-    .hidden{
-        display: none;
-        position: absolute;
-    }
-     #hamburger #faceleft {
-        top: 5%;
-        padding-top: 0px;
-        left: 5%;
-        height: 10%
-     }
-
-     #hamburger #faceright {
-        left: 55%;
-        top: 75%;
-        height: 20%;
-     }
-
-     #hamburger #exit {
-        left: 84%;
-        top: 4%;
-        padding: 0;
-        width: 30px;
-     }
-    
-     
- }
-.anchor {
-     display: block;
-     position: relative;
-     top: 500px;
-     
- }
