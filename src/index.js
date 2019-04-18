@@ -34,9 +34,7 @@ x.addListener(mobileMediaQueryListener) // Attach listener function on state cha
 function mobileMediaQueryListener(x) {
   if (x.matches) { // If media query matches
     document.getElementById("sliderImg1").src = "../Images/Slider_placeholder/bg_mobile.png";
-    document.getElementById('exit').addEventListener('click', function () {
-
-    })
+    
     try{
       element.vanillaTilt.destroy();
     }
@@ -99,6 +97,8 @@ function expandNav() {
   document.getElementById('exit').classList.remove("hidden");
   document.getElementById('hambi').classList.remove("hambi");
   document.getElementById('logo').classList.remove("logo");
+  document.getElementById('face-left').classList.remove("hidden");
+  document.getElementById('face-right').classList.remove("hidden");
 
   document.getElementById('exit').classList.add("exit");
   document.getElementById('hambi').classList.add("hidden");
@@ -109,10 +109,12 @@ function expandNav() {
 }
 
 function exit() {
-  document.getElementById('nav').classList.add("hidden");
+  
   document.getElementById('exit').classList.add("hidden");
   document.getElementById('hambi').classList.add("hambi");
   document.getElementById('logo').classList.add("logo");
+  document.getElementById('face-left').classList.add("hidden");
+  document.getElementById('face-right').classList.add("hidden");
 
   document.getElementById('exit').classList.remove("exit");
   document.getElementById('hambi').classList.remove("hidden");
