@@ -7,7 +7,7 @@ import {
   handleTouchMove,
   handleTouchStart
 } from './slider';
-import mobileNav from './header';
+
 import { MeetUsMobileBehavior, MeetUsDesktopBehavior } from './meetus';
 import VanillaTilt from 'vanilla-tilt';
 //scroll animation
@@ -34,9 +34,6 @@ x.addListener(mobileMediaQueryListener) // Attach listener function on state cha
 function mobileMediaQueryListener(x) {
   if (x.matches) { // If media query matches
     document.getElementById("sliderImg1").src = "../Images/Slider_placeholder/bg_mobile.png";
-    document.getElementById("logo").src = "../Images/header_footer/logo_white_mobile.svg";
-    document.getElementById("hamburger").style.display = 'block';
-    document.getElementById("hambi").addEventListener('click', mobileNav)
     try{
       element.vanillaTilt.destroy();
     }
@@ -46,10 +43,6 @@ function mobileMediaQueryListener(x) {
     
   } else {
     document.getElementById("sliderImg1").src = "../Images/Slider_placeholder/2blobki.png";
-    document.getElementById("logo").src = "../Images/header_footer/logo_mobile@2x.png";
-    document.getElementById("hamburger").style.display = 'none';
-    
-    
     VanillaTilt.init(element);
   }
 }
