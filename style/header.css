@@ -107,7 +107,7 @@ header nav ul li a {
 
 }
 
-header nav ul li a:hover {
+header nav ul li a:hover:active:focus {
     background: var(--very-light-green);
     color: var(--dark-blue);
 }
