@@ -3,6 +3,7 @@
   <head>
     <title>Getting Started</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Images/header_footer/f_mentorzy_CsN_icon.ico" />
     <link rel="stylesheet" href="../style/reset.css">
     <link rel="stylesheet" href="../style/home.css">
     <link rel="stylesheet" href="../style/header.css">
@@ -22,33 +23,22 @@
     <div class = "main-container">
 <!-- header -->
       <header>
-        <nav>
-          <img src="../Images/header_footer/logo_mobile@2x.png" id="logo"/>
+        <img src="../Images/header_footer/logo_white_mobile.svg" class="logo" id="logo">
+        <nav id="nav" class="">
+          <img src="../Images/header_footer/mobile_face_right.svg" class="hidden face-left" alt="" id="face-left">
           <ul>
-            <li><a href="#home" class="hoverNav">HOME</a></li>
-            <li><a href="#" class="hoverNav">AKTUALNOŚCI</a></li>
-            <li><a href="#" class="hoverNav">WSPÓŁPRACA</a></li>
-            <li><a href="#meet_us" class="hoverNav">ZESPÓŁ</a></li>
-            <li><a href="#" class="hoverNav">PROJEKT</a></li>
-            <li><a href="#contact_form" class="hoverNav">KONTAKT</a></li>
+            <li><a class="hoverNav menu_child" href="#home">HOME</a></li>
+            <li><a class="hoverNav menu_child" href="#goal">PROJEKT</a></li>
+            <li><a class="hoverNav menu_child" href="#mentors">WSPÓŁPRACA</a></li>
+            <li><a class="hoverNav menu_child" href="#meet_us">ZESPÓŁ</a></li>
+            <li><a class="hoverNav menu_child" href="#partners">PARTNERZY</a></li>
+            <li><a class="hoverNav menu_child" href="#contact_form">KONTAKT</a></li>
           </ul>
-          <div id="hamburger">
-            <img src="../Images/header_footer/mobile_face_left.png" id="faceleft" class="hidden">
-            <img src="../Images/header_footer/mobile_exit.png" id="exit" class="hidden">
-            <img src="../Images/header_footer/mobile_face_right.png" id="faceright" class="hidden">
-            
-            <ul id="menu_list">
-              <li><a class="menu_child" href="#home" >HOME</a></li>
-              <li><a class="menu_child" href="#" >AKTUALNOŚCI</a></li>
-              <li><a class="menu_child" href="#" >WSPÓŁPRACA</a></li>
-              <li><a class="menu_child" href="#meet_us" >ZESPÓŁ</a></li>
-              <li><a class="menu_child" href="#" >PROJEKT</a></li>
-              <li><a class="menu_child" href="#contact_form" >KONTAKT</a></li>
-            </ul>
-            <img src="../Images/header_footer/white_mobile.png" id="hambi">
-          </div>
+          <img src="../Images/header_footer/mobile_face_left.svg" class=" hidden face-right" alt="" id="face-right">
         </nav>
-      </header> 
+        <img src="../Images/header_footer/white_mobile.svg" class="hambi" id="hambi">
+        <img src="../Images/header_footer/mobile_exit.png" class="hidden" id="exit">
+      </header>
 <!-- header -->
 
 <!-- section home start -->
@@ -80,7 +70,7 @@
       
 
 <!--About project-->
-  <section class="AboutProjectSection" data-aos="fade-up">
+  <section class="AboutProjectSection" id="projekt" data-aos="fade-up">
     <div class="template-title-right">O projekcie</div>
     <div class="grid-item">
       <p class="AboutProjectText">
@@ -102,7 +92,7 @@
       
 
 <!--Goals of the project-->
-  <section class="GoalOfTheProjectSection" data-aos="fade-up">
+  <section class="GoalOfTheProjectSection" id="goal" data-aos="fade-up">
     <div class="template-title">Cele projektu</div>
     <div class="grid-container">
       <div class="grid-item"> 
@@ -136,7 +126,7 @@
 
 
 <!--For mentors and students-->
-  <section class="MentorsAndStudents" data-aos="fade-up">
+  <section class="MentorsAndStudents" id="mentors" data-aos="fade-up">
     <div class="template-title-right">Mentorzy</div>
     <div> 
       <ul>
@@ -186,50 +176,50 @@
           <div class="meet_us_person">
             <img src="../Images/Poznaj nas/IMG_8293.jpeg" alt="handsome man jpg" class="meet_us_img_bottom" />
             
-            <p class="meet_us_text1">Michał Trzpis</p>
-            <p class="meet_us_text2">Prezes</p>
-            <img src="../Images/Ikony/messanger.svg" class="meet_us_messenger"></img>
-            <img src ="../Images/Ikony/email.svg" class="meet_us_envelope"></img>
+            <p class="meet_us_text1">Anna Biłyj</p>
+            <p class="meet_us_text2">External Relations</p>
+            <a href="https://www.facebook.com/profile.php?id=100000790081909" target="_blank" class="meet_us_messenger"><img src="../Images/Ikony/messanger.svg"></img></a>
+            <a href = "mailto: a.bilyj@equarium.pl" class="meet_us_envelope"><img src="../Images/Ikony/email.svg"></img></a>
           </div>
           <div class="meet_us_person">
             <img src="../Images/Poznaj nas/IMG_8274 jasniejsze tlo.jpeg" alt="handsome man jpg" class="meet_us_img_bottom" />
             
             <p class="meet_us_text1">Michał Trzpis</p>
-            <p class="meet_us_text2">Prezes</p>
-            <img src="../Images/Ikony/messanger.svg" class="meet_us_messenger"></img>
-            <img src ="../Images/Ikony/email.svg" class="meet_us_envelope"></img>
+            <p class="meet_us_text2">CEO</p>
+            <a href="https://www.facebook.com/mtrzpis" target="_blank" class="meet_us_messenger" href="www.google.com"><img src="../Images/Ikony/messanger.svg"></img></a>
+            <a href = "mailto: m.trzpis@equarium.pl" class="meet_us_envelope"><img src="../Images/Ikony/email.svg"></img></a>
           </div>
           <div class="meet_us_person">
             <img src="../Images/Poznaj nas/IMG_8338.jpeg" alt="handsome man jpg" class="meet_us_img_bottom" />
             
-            <p class="meet_us_text1">Michał Trzpis</p>
-            <p class="meet_us_text2">Prezes</p>
-            <img src="../Images/Ikony/messanger.svg" class="meet_us_messenger"></img>
-            <img src ="../Images/Ikony/email.svg" class="meet_us_envelope"></img>
+            <p class="meet_us_text1">Kacper Floryn</p>
+            <p class="meet_us_text2">Social Media Specialist</p>
+            <a href="https://www.facebook.com/Florek.Pomidorekk" target="_blank" class="meet_us_messenger"><img src="../Images/Ikony/messanger.svg"></img></a>
+            <a href = "mailto: k.floryn@equarium.pl" class="meet_us_envelope"><img src="../Images/Ikony/email.svg"></img></a>
           </div>
           <div class="meet_us_person">
             <img src="../Images/Poznaj nas/IMG_8832-ver3.jpeg" alt="handsome man jpg" class="meet_us_img_bottom" />
             
-            <p class="meet_us_text1">Michał Trzpis</p>
-            <p class="meet_us_text2">Prezes</p>
-            <img src="../Images/Ikony/messanger.svg" class="meet_us_messenger"></img>
-            <img src ="../Images/Ikony/email.svg" class="meet_us_envelope"></img>
+            <p class="meet_us_text1">Katarzyna Kulińska</p>
+            <p class="meet_us_text2">Marketing & Social Media</p>
+            <a href="https://www.facebook.com/katarzyna.kulinska99" target="_blank" class="meet_us_messenger"><img src="../Images/Ikony/messanger.svg"></img></a>
+            <a href = "mailto: k.kulinska@equarium.pl" class="meet_us_envelope"><img src="../Images/Ikony/email.svg"></img></a>
           </div>
           <div class="meet_us_person">
             <img src="../Images/Poznaj nas/IMG_8837.jpeg" alt="handsome man jpg" class="meet_us_img_bottom" />
             
             <p class="meet_us_text1">Mateusz Janowski</p>
-            <p class="meet_us_text2">Grid Developer</p>
-            <img src="../Images/Ikony/messanger.svg" class="meet_us_messenger"></img>
-            <img src ="../Images/Ikony/email.svg" class="meet_us_envelope"></img>
+            <p class="meet_us_text2">Project Manager</p>
+            <a href="https://www.facebook.com/mjanows" target="_blank" class="meet_us_messenger"><img src="../Images/Ikony/messanger.svg"></img></a>
+            <a href = "mailto: m.janowski@equarium.pl"  class="meet_us_envelope"><img src="../Images/Ikony/email.svg"></img></a>
           </div>
           <div class="meet_us_person">
             <img src="../Images/Poznaj nas/IMG_8849.jpeg" alt="handsome man jpg" class="meet_us_img_bottom" />
             
             <p class="meet_us_text1">Vladyslav Denysiuk</p>
-            <p class="meet_us_text2">Android Developer</p>
-            <img src="../Images/Ikony/messanger.svg" class="meet_us_messenger"></img>
-            <img src ="../Images/Ikony/email.svg" class="meet_us_envelope"></img>
+            <p class="meet_us_text2">IT Specialist</p>
+            <a href="https://www.facebook.com/vladd.denysiuk" target="_blank" class="meet_us_messenger"><img src="../Images/Ikony/messanger.svg"></img></a>
+            <a href = "mailto: v.denysiuk@equarium.pl"  class="meet_us_envelope"><img src="../Images/Ikony/email.svg"></img></a>
           </div>
         </div>
       </section>
@@ -309,7 +299,7 @@
           </div>
           <div class="privacy-policy">
             Klikając "Wyślij" wyrażasz zgodę na przetwarzanie twoich danych przez organizację Equarium,
-            w celach marketingowych i kontaktu. Po więcej szczegułów zajrzyj do <a href="/dist/privacy-policy.html" id="privacy-policy">Polityka Prywatności</a>
+            w celach marketingowych i kontaktu. Po więcej szczegułów zajrzyj do <a href="/dist/privacy-policy.html" target="_blank" id="privacy-policy">Polityka Prywatności</a>
           </div>
           
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->

@@ -155,6 +155,16 @@
     padding-bottom: 0;
 }
 
+.meet_us_person .meet_us_envelope img{
+    height: 50px;
+    width: 50px;
+}
+
+.meet_us_person .meet_us_messenger img{
+    height:50px;
+    width: 50px;
+}
+
 .meet_us_person .meet_us_messenger:hover {  
      transform: scale(1);
      cursor: pointer;  
@@ -189,6 +199,7 @@
         width: 90%;
         height: 95%;
     }
+    
 }
 
 /* 
@@ -207,6 +218,15 @@
      .meet_us_person {
          width: 90%;
          height: 95%;
+     }
+     .meet_us_person .meet_us_envelope img {
+         height: 30px;
+         width: 30px;
+     }
+
+     .meet_us_person .meet_us_messenger img {
+         height: 30px;
+         width: 30px;
      }
      .meet_us_person .meet_us_messenger {
          
