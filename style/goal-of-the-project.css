@@ -33,7 +33,7 @@
     justify-self: start;
 }
 
-.GoalOfTheProjectSection .grid-container .grid-item p {
+.GoalOfTheProjectSection .grid-container .grid-item > p {
     color: .000;
     font-family: var(--noto-font);
     font-size: var(--font-size-s);
@@ -65,7 +65,18 @@
   ##Screen=B/w 481px to 767px
 */
 
-@media (min-width: 481px) and (max-width: 767px) {}
+@media (min-width: 481px) and (max-width: 767px) {
+    
+    .GoalOfTheProjectSection {
+        height: auto;
+        max-height: none;
+    }
+
+    .GoalOfTheProjectSection .grid-container .grid-item>p {
+        font-size: var(--font-size-xs);
+        margin-bottom: 10px;
+    }
+}
 
 
 /* 

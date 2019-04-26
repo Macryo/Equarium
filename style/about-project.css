@@ -64,12 +64,14 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .AboutProjectText{
-        font-size: var(--font-size-xs);
+        font-size: calc(var(--font-size-xs) + 2px);
     }
     .AboutProjectSection > :nth-child(4){
         width: 65%;
-        
+        margin-top: 30px;
     }
+    
+
 }
 
 /* 
@@ -78,7 +80,30 @@
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+    .AboutProjectSection {
+        height: auto;
+    }
 
+    .AboutProjectText {
+        font-size: var(--font-size-xs);
+    }
+
+    /* title */
+
+    .AboutProjectSection> :nth-child(1) {
+        margin-bottom: 40px;
+    }
+
+    /* text */
+    .AboutProjectSection> :nth-child(2) {
+        min-width: 75%;
+    }
+
+    /* Write to us */
+    .AboutProjectSection> :nth-child(4) {
+        justify-self: center;
+        margin-top: 30px;
+    }
 }
 
 
