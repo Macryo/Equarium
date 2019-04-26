@@ -17785,52 +17785,40 @@ function validate(e) {
 /*!***********************!*\
   !*** ./src/header.js ***!
   \***********************/
-/*! exports provided: default */
+/*! exports provided: expandNav, exit */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return mobileNav; });
-var hamburger = document.getElementById('hamburger');
-var hambi = document.getElementById('hambi');
-var menu_list = document.getElementById('menu_list');
-var vh = window.innerHeight * 0.01;
-var vw = window.innerWidth * 0.01; // Then we set the value in the --vh custom property to the root of the document
-
-document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
-window.addEventListener('resize', function () {
-  // We execute the same script as before
-  var vh = window.innerHeight * 0.01;
-  var vw = window.innerWidth * 0.01;
-  document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
-  document.documentElement.style.setProperty('--vw', "".concat(vw, "px"));
-});
-function mobileNav() {
-  hamburger.style = " height: calc(var(--vh, 1vh) * 100); width: 100vw; min-width: 320px; background: var(--dark-blue)";
-  hambi.style.display = 'none';
-  menu_list.style.display = 'flex';
-  document.getElementById('logo').style.left = "0%";
-  document.getElementsByClassName('hidden')[0].style.display = 'flex';
-  document.getElementsByClassName('hidden')[1].style.display = 'flex';
-  document.getElementsByClassName('hidden')[2].style.display = 'flex';
-  document.getElementById("exit").addEventListener('click', exit);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "expandNav", function() { return expandNav; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exit", function() { return exit; });
+function expandNav() {
+  document.getElementById('nav').classList.remove("hidden");
+  document.getElementById('exit').classList.remove("hidden");
+  document.getElementById('hambi').classList.remove("hambi");
+  document.getElementById('logo').classList.remove("logo");
+  document.getElementById('face-left').classList.remove("hidden");
+  document.getElementById('face-right').classList.remove("hidden");
+  document.getElementById('exit').classList.add("exit");
+  document.getElementById('hambi').classList.add("hidden");
+  document.getElementById('logo').classList.add("hidden");
+  document.getElementById('nav').classList.add("expandNav");
+  document.getElementById('exit').addEventListener('click', exit);
 
   for (var i = 0; i < 6; i++) {
     document.getElementsByClassName('menu_child')[i].addEventListener('click', exit);
   }
 }
-
 function exit() {
-  hamburger.style.height = '100%';
-  hamburger.style.width = '100%';
-  hamburger.style.minWidth = '0';
-  document.getElementById('faceright').style.display = 'none';
-  document.getElementById('faceleft').style.display = 'none';
-  document.getElementById('exit').style.display = 'none';
-  document.getElementById('logo').style.left = "20%";
-  hamburger.style.background = 'transparent';
-  hambi.style.display = 'block';
-  menu_list.style.display = 'none';
+  document.getElementById('exit').classList.add("hidden");
+  document.getElementById('hambi').classList.add("hambi");
+  document.getElementById('logo').classList.add("logo");
+  document.getElementById('face-left').classList.add("hidden");
+  document.getElementById('face-right').classList.add("hidden");
+  document.getElementById('exit').classList.remove("exit");
+  document.getElementById('hambi').classList.remove("hidden");
+  document.getElementById('logo').classList.remove("hidden");
+  document.getElementById('nav').classList.remove("expandNav");
 }
 
 /***/ }),
@@ -17849,11 +17837,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form */ "./src/form.js");
 /* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./slider */ "./src/slider.js");
 /* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_slider__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header */ "./src/header.js");
-/* harmony import */ var _meetus__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./meetus */ "./src/meetus.js");
-/* harmony import */ var _meetus__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_meetus__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var vanilla_tilt__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vanilla-tilt */ "./node_modules/vanilla-tilt/lib/vanilla-tilt.js");
-/* harmony import */ var vanilla_tilt__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(vanilla_tilt__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _meetus__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./meetus */ "./src/meetus.js");
+/* harmony import */ var _meetus__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_meetus__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vanilla_tilt__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vanilla-tilt */ "./node_modules/vanilla-tilt/lib/vanilla-tilt.js");
+/* harmony import */ var vanilla_tilt__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vanilla_tilt__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./header */ "./src/header.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_6__);
 
@@ -17869,6 +17857,9 @@ aos__WEBPACK_IMPORTED_MODULE_6___default.a.init(); //scroll animation
 
 var x = window.matchMedia("(max-width: 480px)");
 var z = window.matchMedia("(min-width: 481px)"); // media queries variables//
+//header
+
+document.getElementById('hambi').addEventListener('click', _header__WEBPACK_IMPORTED_MODULE_5__["expandNav"]); //header
 // slider functionality//
 
 document.querySelector('#dot1').addEventListener('click', function () {
@@ -17881,7 +17872,7 @@ document.querySelector('#dot3').addEventListener('click', function () {
   Object(_slider__WEBPACK_IMPORTED_MODULE_2__["currentSlide"])(3);
 });
 var element = document.querySelector("#sliderImg1");
-vanilla_tilt__WEBPACK_IMPORTED_MODULE_5___default.a.init(element);
+vanilla_tilt__WEBPACK_IMPORTED_MODULE_4___default.a.init(element);
 mobileMediaQueryListener(x); // Call listener function at run time
 
 x.addListener(mobileMediaQueryListener); // Attach listener function on state changes
@@ -17890,9 +17881,6 @@ function mobileMediaQueryListener(x) {
   if (x.matches) {
     // If media query matches
     document.getElementById("sliderImg1").src = "../Images/Slider_placeholder/bg_mobile.png";
-    document.getElementById("logo").src = "../Images/header_footer/logo_white_mobile.svg";
-    document.getElementById("hamburger").style.display = 'block';
-    document.getElementById("hambi").addEventListener('click', _header__WEBPACK_IMPORTED_MODULE_3__["default"]);
 
     try {
       element.vanillaTilt.destroy();
@@ -17901,9 +17889,7 @@ function mobileMediaQueryListener(x) {
     }
   } else {
     document.getElementById("sliderImg1").src = "../Images/Slider_placeholder/2blobki.png";
-    document.getElementById("logo").src = "../Images/header_footer/logo_mobile@2x.png";
-    document.getElementById("hamburger").style.display = 'none';
-    vanilla_tilt__WEBPACK_IMPORTED_MODULE_5___default.a.init(element);
+    vanilla_tilt__WEBPACK_IMPORTED_MODULE_4___default.a.init(element);
   }
 } // slider functionality
 // contact form 
@@ -17913,13 +17899,13 @@ document.getElementById('mc-embedded-subscribe-form').addEventListener('submit',
 // slider functionality//
 //meetus functionality//
 
-Object(_meetus__WEBPACK_IMPORTED_MODULE_4__["MeetUsMobileBehavior"])(x); // Call listener function at run time
+Object(_meetus__WEBPACK_IMPORTED_MODULE_3__["MeetUsMobileBehavior"])(x); // Call listener function at run time
 
-x.addListener(_meetus__WEBPACK_IMPORTED_MODULE_4__["MeetUsMobileBehavior"]); // Attach listener function on state changes
+x.addListener(_meetus__WEBPACK_IMPORTED_MODULE_3__["MeetUsMobileBehavior"]); // Attach listener function on state changes
 
-Object(_meetus__WEBPACK_IMPORTED_MODULE_4__["MeetUsDesktopBehavior"])(z); // Call listener function at run time
+Object(_meetus__WEBPACK_IMPORTED_MODULE_3__["MeetUsDesktopBehavior"])(z); // Call listener function at run time
 
-z.addListener(_meetus__WEBPACK_IMPORTED_MODULE_4__["MeetUsDesktopBehavior"]); // Attach listener function on state changes
+z.addListener(_meetus__WEBPACK_IMPORTED_MODULE_3__["MeetUsDesktopBehavior"]); // Attach listener function on state changes
 //
 //contact form temporary
 // document.querySelector('#sliderImg1').addEventListener('touchstart', handleTouchStart)
