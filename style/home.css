@@ -2,6 +2,7 @@
 
 /* home section styling */
 #home{
+    padding-top: 60px;
     height: 100vh;
     margin-top: 0;
     font-family: var(--oswald-font)

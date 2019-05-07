@@ -17934,6 +17934,7 @@ function more() {
   } else {
     document.getElementById("meet_us_grid").style.display = "none";
     document.getElementById("more").innerHTML = "więcej +";
+    window.location = "#meet_us";
   }
 }
 

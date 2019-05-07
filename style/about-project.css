@@ -8,6 +8,7 @@
 }
 
 .AboutProjectSection{
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr 2fr 1fr 2fr;
@@ -81,6 +82,7 @@
 
 @media (min-width: 481px) and (max-width: 767px) {
     .AboutProjectSection {
+        margin-top: 20px;
         height: auto;
     }
 
@@ -116,7 +118,7 @@
     .AboutProjectSection{
         display: flex;
         flex-direction: column;
-        margin-top: 40px;
+        margin-top: 0;
         height: auto;
     }
     
