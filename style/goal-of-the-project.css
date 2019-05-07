@@ -1,5 +1,9 @@
 @import url("variables.css");
 
+.GoalOfTheProjectSection {
+	margin-top: 40px;
+}
+
 .GoalOfTheProjectSection .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;

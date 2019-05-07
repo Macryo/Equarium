@@ -1,7 +1,11 @@
 @import url("variables.css");
 
 section {
-    margin-top: 80px;
+    padding-top: 80px;
+}
+
+section #home {
+    padding-top: 0px;
 }
 /* Applies styling to tiltes */
 
