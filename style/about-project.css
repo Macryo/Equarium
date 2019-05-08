@@ -8,16 +8,14 @@
 }
 
 .AboutProjectSection{
-    margin-top: 40px;
+    padding-top: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr 1fr 2fr;
-    height: 80vh;
+    /* grid-template-rows: 1fr 2fr 2fr 1fr 2fr; */
+    height: 60vh;
     grid-template-areas: "title title"
-                         ".  ."
                          "text  img"
-                         "contact ."
-                         ". .";
+                         "contact .";
 }
 
 /* Title */
