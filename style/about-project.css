@@ -11,10 +11,10 @@
 
 #stripes_three {
     position: absolute;
-    height: 30%;
+    height: 40%;
+    width: 180px;
     top: 150px;
     right: 0px;
-
 }
 
 .project-container {
@@ -31,6 +31,7 @@
 
 .project-container .align-items-left {
     padding: 40px;
+    padding-top: 0px;
     width: 30%;
     flex-direction: row;
     align-items: flex-start;
@@ -38,6 +39,8 @@
 
 .project-container .align-items-left .project-text{
     font-size: var(--font-size-s);
+    width: 90%;
+    line-height: 1.4;
 }
 
 .project-container .align-items-right  img{
@@ -59,4 +62,150 @@
 }
 
 
+
+@media (max-width: 1200px) {
+
+    #stripes_three {
+        position: absolute;
+        height: 25%;
+        width: 140px;
+        top: 150px;
+        right: 0px;
+    }
+
+    .project-container .align-items-right {
+        margin-right: 0;
+    }
+
+    .project-container .align-items-left {
+        margin-left: 30px;
+    }
+
+    .project-container .align-items-left .project-text {
+        width: 100%;
+        line-height: 1.3;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    .project-container .align-items-right img {
+        width: 320px;
+        margin-left: 20px;
+    }
+
+    .project-container .align-items-right {
+        margin-right: 50px;
+    }
+
+    .project-container .align-items-left {
+        padding: 0;
+        margin-left: 80px;
+        width: 50%;
+    }
+
+    .project-container .align-items-left .project-text {
+        width: 100%;
+        font-size: calc(var(--font-size-s) - 3px);
+        line-height: 1.3;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .project-container {
+        margin-top: 70px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #stripes_three {
+        height: 20%;
+        width: 120px;
+    }
+
+    .project-container .align-items-left {
+        margin-left: 0px;
+    }
+
+    .project-container .align-items-right {
+        margin-top: 50px;
+        width: 100%;
+        align-items: center;
+        margin-right: 0px;
+    }
+
+    .projekt-button {
+        right: 0px; 
+    }
+
+    .projekt-button a{
+        text-align: left;
+        padding-left: 30px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .project-container {
+        margin-top: 70px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #stripes_three {
+        height: 20%;
+        width: 120px;
+    }
+
+    .project-container .align-items-left {
+        margin-left: 0px;
+    }
+
+    .project-container .align-items-right {
+        margin-top: 50px;
+        width: 100%;
+        align-items: center;
+        margin-right: 0px;
+    }
+
+    .projekt-button {
+        right: 0px;
+    }
+
+    .projekt-button a {
+        text-align: left;
+        padding-left: 30px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    #stripes_three {
+        height: 15%;
+        width: 100px;
+        top: 150px;
+    }
+
+    .projekt-button {
+        width: 100%;
+    }
+
+    .project-container .align-items-left {
+        width: 70%;
+    }
+
+    .project-container .align-items-right {
+        width: 70%;
+    }
+
+    .project-container .align-items-right img {
+        width: 100%;
+        margin-left: 20px;
+    }
+}
 
