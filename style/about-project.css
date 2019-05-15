@@ -1,159 +1,53 @@
 @import url("variables.css");
 
-.AboutProjectText {
-    color: .000;
-    font-family: var(--noto-font);
+#projekt {
+    display: flex;
+    flex-direction: column;
+    max-height: none;
+    align-content: center;
+    justify-content: center;
+}
+
+.project-container {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.project-container .align-items-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.project-container .align-items-left {
+    padding: 40px;
+    width: 30%;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.project-container .align-items-left .project-text{
+    font-size: var(--font-size-s);
+}
+
+.project-container .align-items-right  img{
+    width: 80%;
+}
+
+.projekt-button {
+    width: 100%;
+    position: relative;
+    right: 100px;
+    margin-top: 40px;
+}
+
+.projekt-button > a {
+    width: 100%;
+    text-align: center;
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-regular);
 }
 
-.AboutProjectSection{
-    padding-top: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 2fr 2fr 1fr 2fr; */
-    height: 60vh;
-    grid-template-areas: "title title"
-                         "text  img"
-                         "contact .";
-}
-
-/* Title */
-
-.AboutProjectSection > :nth-child(1) {
-    grid-area: title;
-    justify-self: flex-end;
-    align-self: flex-start;
-    width: 60%;
-}
-
-/* Text */
-
-.AboutProjectSection > :nth-child(2){
-    grid-area: text;
-    text-align: left;
-    max-width: 60%;
-    margin: auto;
-}
-
-/* Image */
-
-.AboutProjectSection > :nth-child(3) {
-    grid-area: img;
-    margin: auto; 
-}
-
-.AboutProjectSection> :nth-child(3) img {
-    width: 75%;
-    height: auto;
-}
-
-/* Contact us */
-
-.AboutProjectSection > :nth-child(4) {
-    grid-area: contact;
-    justify-content: center;
-    width: 57%;
-}
-
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .AboutProjectText{
-        font-size: calc(var(--font-size-xs) + 2px);
-    }
-    .AboutProjectSection > :nth-child(4){
-        width: 65%;
-        margin-top: 30px;
-    }
-    
-
-}
-
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .AboutProjectSection {
-        margin-top: 20px;
-        height: auto;
-    }
-
-    .AboutProjectText {
-        font-size: var(--font-size-xs);
-    }
-
-    /* title */
-
-    .AboutProjectSection> :nth-child(1) {
-        margin-bottom: 40px;
-    }
-
-    /* text */
-    .AboutProjectSection> :nth-child(2) {
-        min-width: 75%;
-    }
-
-    /* Write to us */
-    .AboutProjectSection> :nth-child(4) {
-        justify-self: center;
-        margin-top: 30px;
-    }
-}
 
 
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 480px
-*/
-
-@media (min-width: 320px) and (max-width: 480px) {
-    .AboutProjectSection{
-        display: flex;
-        flex-direction: column;
-        margin-top: 0;
-        height: auto;
-    }
-    
-    .AboutProjectSection> :nth-child(1){
-        order: 1;
-        align-self: flex-end;
-        width: 70%;
-        height: 45px;
-        margin-bottom: 40px;
-        min-height: 45px;
-    
-    }
-
-    .AboutProjectSection> :nth-child(2) {
-        order: 2;
-        max-width: 78%;
-    }
-
-    .AboutProjectSection> :nth-child(3){
-        order: 4;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .AboutProjectSection> :nth-child(4){
-        order: 3;
-        align-self: left;
-        margin-bottom: 40px;
-        width: 63.5%;
-        min-height: 60px;
-    }
-
-
-
-    .AboutProjectText {
-        font-size: calc(var(--font-size-s) - 4px);
-        line-height: 1.3;
-    }
-}
