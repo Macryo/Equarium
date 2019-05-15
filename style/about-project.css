@@ -6,10 +6,19 @@
     max-height: none;
     align-content: center;
     justify-content: center;
+    position: relative;
+}
+
+#stripes_three {
+    position: absolute;
+    height: 30%;
+    top: 150px;
+    right: 0px;
+
 }
 
 .project-container {
-    margin-top: 70px;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
 }
