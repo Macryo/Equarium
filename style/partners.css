@@ -20,7 +20,7 @@
 @media (min-width: 768px) and (max-width: 1024px) {
     .partners-container {
         
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
        grid-gap: 20px;
         
     }
@@ -51,17 +51,28 @@
 
 @media (min-width: 1822px)  {
     .partners-container {
-
+        margin-top: 100px;
+        margin-bottom: 100px;
         grid-template-columns: 1fr 1fr;
-
         grid-gap: 50px;
     }
 
     .partners-container figure img {
-        height: 250px;
+        height: 200px;
 
     }
 
+
+}
+
+@media (min-width: 1025px) {
+
+    .partners-container {
+
+        margin-top: 100px;
+        margin-bottom: 50px;
+
+    }
 
 }
 
