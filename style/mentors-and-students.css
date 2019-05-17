@@ -14,9 +14,10 @@
   align-items: flex-end;
 }
 
-.students-box-container {
-  display: flex;
-  flex-direction: row;
+.students-container {
+  max-width: 100%;
+  align-content: center;
+  margin: auto;
 }
 
 .align-items-left{
@@ -63,6 +64,7 @@
 /* STANDARD */
 .mentors-list > li {
   padding: 15px;
+  text-align: justify;
 }
 
 .mentors > .Mouse-over-it{
@@ -87,4 +89,77 @@
 
 .align-items-right {
 margin-right: 50px;
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+  .mentors {
+    font-size: calc(var(--font-size-s) - 3px);
+  }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+
+  .mentors-container {
+    max-width: 100%;
+    align-content: center;
+    margin: auto;
+  }
+
+  .mentors-container .Mouse-over-it{
+    width: 100%;
+  }
+
+  .students-container .Mouse-over-it{
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .mentors-container {
+    max-width: 70%;
+  }
+
+  .students-container {
+    max-width: 70%;
+    text-align: justify;
+  }
+
+  .mentors-list {
+    margin-right: 0;
+  }
+
+  .align-items-right {
+  margin-right: 0;
+  align-items: center;
+  }
+
+  .students-img {
+    display: block;
+    width: 100%;
+  }
+
+/* GRRR risky code */
+  .students-img > img {
+    padding-left: 20%;
+  }
+/* GRRR risky code */
+
+  .students-container .align-items-left {
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+    padding: 0;
+  }
+
+  .mentors {
+    margin-bottom: 0;
+    z-index: 0;
+  }
 }
