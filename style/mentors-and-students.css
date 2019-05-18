@@ -8,21 +8,20 @@
   justify-content: center;
 }
 
+#students {
+  padding-top: 15px;
+  margin-bottom: -60px;
+}
+
 .align-items-right{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.students-container {
-  max-width: 100%;
-  align-content: center;
-  margin: auto;
-}
-
 .align-items-left{
   padding: 40px;
-  width: 30%;
+  width: 40%;
   flex-direction: row;
   align-items: flex-start;
 }
@@ -61,10 +60,8 @@
   padding-right: 15px;
 }
 
-/* STANDARD */
 .mentors-list > li {
   padding: 15px;
-  text-align: justify;
 }
 
 .mentors > .Mouse-over-it{
@@ -75,10 +72,8 @@
   margin-top: 15px;
 }
 
-.students-mouse-over {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 55%;
+.Mouse-over-it {
+  width: 80%;
 }
 
 .mentors-list {
@@ -87,69 +82,183 @@
   margin-bottom: 15px;
 }
 
+
 .align-items-right {
-margin-right: 50px;
+  margin-right: 0;
 }
 
+.mentors-container {
+    max-width: 40%;
+    align-content: end;
+    align-items: end;
+    margin-right: 15px;
+    margin-left: auto;
+}
+
+.students-container {
+  max-width: 100%;
+  align-content: center;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.students-container .Mouse-over-it{
+  width: 40%;
+  margin-left: 40px;
+}
+
+  .students-img-mobile {
+    display: none;
+  }
+
+  .students-img-desktop{
+    display: inline;
+    position: relative;
+    left: 60%;
+    top: -120px;
+    width: 100%;
+  }
+
+
 @media (max-width: 1200px) {
+
+/* GENERAL */
+  .Mouse-over-it {
+    width: 100%;
+  }
+/* GENERAL */
+
+  /* MENTORS */
+  .mentors {
+    font-size: calc(var(--font-size-s) - 3px);
+    margin-bottom: 0;
+    z-index: 0;
+  }
+
+  .mentors-container {
+      max-width: 100%;
+  }
+  /* MENTORS */
+
+  /* STUDENTS */
+  .students {
+    font-size: calc(var(--font-size-s) - 3px);
+  }
+
+  #students{
+    margin-bottom: -200px;
+  }
+
+  .students-container {
+    max-width: 100%;
+    /* text-align: justify; */
+  }
+
+  .students-container .Mouse-over-it {
+    width: 50%;
+    margin-left: 40px;
+  }
+
+  .students-container .align-items-left{
+    width: 50%;
+  }
+
+  .students-img-desktop{
+    left: 60%;
+    top: -250px;
+  }
+  /* STUDENTS */
 
 }
 
 @media (max-width: 992px) {
-  .mentors {
-    font-size: calc(var(--font-size-s) - 3px);
+
+  /* MENTORS */
+  .mentors-container {
+      max-width: 100%;
+      margin-right: auto;
   }
+
+  .mentors-list {
+  margin-right: 25px;
+  }
+  /* MENTORS */
+
+  /* STUDENTS */
+
+  #students{
+    margin-bottom: 0;
+  }
+
+  .students-container .Mouse-over-it{
+    margin-top: 0;
+    width: 70%;
+  }
+
+  .students-container .align-items-left{
+    width: 70%;
+    padding-bottom: 0;
+  }
+
+
+    .students-img-mobile {
+      display: block;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* GRRR risky code */
+    .students-img-mobile > img {
+      padding-left: 40%;
+    }
+    /* GRRR risky code */
+
+  .students-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .students-img-desktop{
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  /* STUDENTS */
+
 }
 
 @media (max-width: 768px) {
 
-}
-
-@media (max-width: 576px) {
-
-  .mentors-container {
-    max-width: 100%;
-    align-content: center;
-    margin: auto;
+/* GENERAL */
+  .align-items-right {
+  margin-right: 0;
+  align-items: center;
   }
+/* GENERAL */
 
+/* MENTORS */
   .mentors-container .Mouse-over-it{
     width: 100%;
   }
 
-  .students-container .Mouse-over-it{
-    width: 100%;
-    margin-top: 15px;
-  }
-
   .mentors-container {
     max-width: 70%;
-  }
-
-  .students-container {
-    max-width: 70%;
-    text-align: justify;
   }
 
   .mentors-list {
     margin-right: 0;
   }
+/* MENTORS */
 
-  .align-items-right {
-  margin-right: 0;
-  align-items: center;
+/* STUDENTS */
+  .students-container {
+    max-width: 70%;
+    /* text-align: justify; */
   }
-
-  .students-img {
-    display: block;
-    width: 100%;
-  }
-
-/* GRRR risky code */
-  .students-img > img {
-    padding-left: 20%;
-  }
-/* GRRR risky code */
 
   .students-container .align-items-left {
     align-items: center;
@@ -158,8 +267,20 @@ margin-right: 50px;
     padding: 0;
   }
 
-  .mentors {
-    margin-bottom: 0;
-    z-index: 0;
+  .students-container .Mouse-over-it{
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .students-img-mobile > img {
+    padding-left: 30%;
+  }
+/* STUDENTS */
+}
+
+@media (max-width: 576px) {
+  .students-img-mobile > img {
+    padding-left: 25%;
   }
 }
