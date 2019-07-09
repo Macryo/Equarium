@@ -18,7 +18,7 @@
 }
 
 .project-container {
-    margin-top: 150px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
 }
@@ -50,7 +50,6 @@
 .projekt-button {
     width: 100%;
     position: relative;
-    right: 100px;
     margin-top: 40px;
 }
 
