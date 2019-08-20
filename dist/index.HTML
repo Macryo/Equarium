@@ -24,7 +24,12 @@
     <div class = "main-container">
 <!-- header -->
       <header>
-        <img src="../Images/header_footer/logo_white_mobile.svg" class="logo" id="logo">
+        <img srcset="
+        ../Images/header_footer/logo_white_mobile.png 100w,
+        ../Images/header_footer/logo_mobile@4x.png 800w"
+        src="../Images/header_footer/logo_mobile@4x.png"
+        class="logo" id="logo" alt="logo_equarium">
+        
         <nav id="nav" class="">
           <img src="../Images/header_footer/mobile_face_right.svg" class="hidden face-left" alt="" id="face-left">
           <ul>
@@ -355,8 +360,16 @@
        -->
     </div>
     <script src="main.js"></script>
+    <script>AOS.init();</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140842219-1"></script>
 <script>
-  AOS.init();
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140842219-1');
 </script>
 
   </body>

@@ -3,10 +3,10 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    height: 60px;
+    height: 84px;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     background-color: var(--dark-blue);
 }
 .hidden{
@@ -109,10 +109,12 @@ header nav ul li a {
 
 header nav ul li a:hover:active:focus {
     background: var(--very-light-green);
-    color: var(--dark-blue);
+    color: var(--green);
 }
 
-
+#logo{
+    content: url("../Images/header_footer/logo_mobile@4x.png");
+}
 
 
 }
@@ -140,12 +142,11 @@ header nav ul li a:hover:active:focus {
         display: none;
         
     }
-    #logo{
-        content: url("../Images/header_footer/logo_mobile@4x.png");
-    }
+    
     header nav ul li a {
         color: black;
-        font-size: 21px;
+        font-size: 18px;
+        line-height: 27px;
         text-decoration: none;
         font-family: var(--oswald-font);
 
@@ -168,7 +169,7 @@ header nav ul li a:hover:active:focus {
         display: block;
         width: 0;
         height: 2px;
-        background: var(--dark-blue);
+        background: var(--green);
         transition: width .3s;
         padding-top: 2px;
         
