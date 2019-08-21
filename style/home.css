@@ -72,8 +72,8 @@
 
  .dot {
      cursor: pointer;
-     height: var(--font-size-ms);
-     width: var(--font-size-ms);
+     height: var(--font-size-m);
+     width: var(--font-size-m);
      margin: 0 2px;
      background-color: whitesmoke ;
      border-radius: 50%;

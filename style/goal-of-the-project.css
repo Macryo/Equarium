@@ -1,127 +1,107 @@
 @import url("variables.css");
 
 .GoalOfTheProjectSection {
-	margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    max-height: none;
+    align-content: center;
+    justify-content: center;
+    position: relative;
 }
 
-.GoalOfTheProjectSection .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 2fr;
-}
-
-.GoalOfTheProjectSection .grid-container .grid-item {
-    max-width: 80%;
-}
-
-.GoalOfTheProjectSection .grid-container > :nth-child(1) {
-    grid-column: 1;
-    grid-row: 2 / 5;
-}
-
-.GoalOfTheProjectSection .grid-container > :nth-child(2) {
-    grid-column: 2;
-    grid-row: 2;
-    justify-self: start;
-}
-
-.GoalOfTheProjectSection .grid-container > :nth-child(3) {
-    grid-column: 2;
-    grid-row: 3;
-    justify-self: start;
-}
-
-.GoalOfTheProjectSection .grid-container > :nth-child(4) {
-    grid-column: 2;
-    grid-row: 4;
-    justify-self: start;
-}
-
-.GoalOfTheProjectSection .grid-container .grid-item > p {
-    color: .000;
+.goal > p {
     font-family: var(--noto-font);
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-regular);
     text-align: left;
 }
 
-.goal-headline {
+.goal .goal-headline {
     font-family: var(--oswald-font);
     font-weight: var(--font-weight-semibold);
-    text-decoration: underline var(--light-green);
-    text-decoration-style: solid;
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
 }
 
-/* 
+.goal .goal-headline::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -7px;
+    height: 3px;
+    background-color: var(--very-light-green);
+    width: 40%;
+}
+
+.goal-container {
+    display: flex;
+    align-items: center;
+}
+
+.goal-image {
+  align-items: center;
+    margin-top: 20px;
+    width: 45%;
+}
+
+.goal-goals {
+  margin-left: 80px;
+  width: 50%;
+}
+
+.goal {
+    margin-top: 30px;
+}
+
+#dots{
+    position: absolute;
+    height: 100%;
+    top: 230px;
+}
+
+.blur {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+ 
+.blur:hover {
+  filter: blur(1px);
+}
+
+
+@media (max-width: 1024px) {
+
+  .goal-container {
+      flex-direction: column;
+  }
+
+  #dots{
+    height: 60%;
+    top: 200px;
+}
+
+  .goal-image {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+  .goal-goals {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*
   ##Device = Tablets, Ipads (portrait)
   ##Screen=B/w 768px to 1024px
 */
 
-@media (min-width: 768px) and (max-width: 1024px) {
-
+@media (max-width: 768px) {
+  #dots{
+    height: 50%;
 }
 
-
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen=B/w 481px to 767px
-*/
-
-@media (min-width: 481px) and (max-width: 767px) {
-    
-    .GoalOfTheProjectSection {
-        height: auto;
-        max-height: none;
-    }
-
-    .GoalOfTheProjectSection .grid-container .grid-item>p {
-        font-size: var(--font-size-xs);
-        margin-bottom: 10px;
-    }
-}
-
-
-/* 
-  ##Device=Most of the Smartphones Mobiles (Portrait)
-  ##Screen=B/w 320px to 480px
-*/
-
-@media (min-width: 320px) and (max-width: 480px) {
-    .GoalOfTheProjectSection{
-        height: auto;
-        max-height: none;
-    }
-
-    .GoalOfTheProjectSection .grid-container {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-    }
-
-    .GoalOfTheProjectSection > :nth-child(1){
-        width: 70%;
-        height: 45px;
-        margin-bottom: 30px;
-    }
-    /* Image */
-    .GoalOfTheProjectSection .grid-container> :nth-child(1){
-        order: 4;
-        margin-top: 90px;
-        margin-bottom: 40px;
-    }
-    .GoalOfTheProjectSection .grid-container> :nth-child(2){
-        order: 1;
-    }
-    .GoalOfTheProjectSection .grid-container> :nth-child(3){
-        order: 2;
-    }
-    .GoalOfTheProjectSection .grid-container> :nth-child(4){
-        order: 3;
-    }
-
-    .goal-headline{
-        margin-top: 30px;
-    }
 }

@@ -22,13 +22,14 @@ section #home {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 /* Applies in case of tiltes attached to right side */
 .template-title-right {
     display: flex;
     justify-self: flex-end;
-} 
+    align-self: flex-end;
+}
 
 .grid-container {
     display: grid;
@@ -43,37 +44,34 @@ section #home {
     font-family: var(--noto-font);
     font-size: var(--font-size-xs);
     font-weight: var(--font-weight-regular);
-    height: 60px;
-    width: 60%;
+    min-height: 60px;
+    width: 30%;
     display: flex;
-    justify-content: left;
+    transition: 1s;
+    justify-content: center;
     align-items: center;
 }
 
 .Mouse-over-it a {
+    padding-right: 15px;
     color: black;
     text-decoration: none;
-    
-}
 
-.Mouse-over-it span {
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
 }
 
 .Mouse-over-it:hover {
+    transition: 0.5s;
     background-color: var(--very-light-green);
 }
 
-/* 
+/*
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
 */
 
 /* Need to change design for grid elements */
 
-/* 
+/*
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
 */
@@ -84,17 +82,17 @@ section #home {
 }
 
 
-/* 
+/*
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 480px
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
-    
+
     .template-title,
     .template-title-right {
         font-size: var(--font-size-ms);
-        width: 70%;
+        width: 80%;
         height: 45px;
     }
 }

@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>eQuarium</title>
+    <meta charset="UTF-8">
     <meta name="author" content="Maciej Hnat, Marcin Głowacki, Maciej Rychlik">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../Images/header_footer/f_mentorzy_CsN_icon.ico" />
@@ -22,15 +23,22 @@
   </head>
   <body>
     <div class = "main-container">
+
+
 <!-- header -->
+
       <header>
+<<<<<<< HEAD
         <img src="../Images/header_footer/logo_white_mobile.svg" class="logo" id="logo" alt="logo">
+=======
+        <div class="logo" id="logo"></div>
+>>>>>>> develop
         <nav id="nav" class="">
           <img src="../Images/header_footer/mobile_face_right.svg" class="hidden face-left" alt="face-vector-graphic" id="face-left">
           <ul>
             <li><a class="hoverNav menu_child" href="#home">HOME</a></li>
             <li><a class="hoverNav menu_child" href="#goal">PROJEKT</a></li>
-            <li><a class="hoverNav menu_child" href="#mentors">WSPÓŁPRACA</a></li>
+            <li><a class="hoverNav menu_child" href="#mentors-students">WSPÓŁPRACA</a></li>
             <li><a class="hoverNav menu_child" href="#meet_us">ZESPÓŁ</a></li>
             <li><a class="hoverNav menu_child" href="#partners">PARTNERZY</a></li>
             <li><a class="hoverNav menu_child" href="#contact_form">KONTAKT</a></li>
@@ -46,7 +54,7 @@
 
       <section id="home">
         <div class="slideshow-container">
-        
+
           <div class="mySlides">
             <img src="../Images/Slider_placeholder/2blobki.png" class="your-element" id="sliderImg1" alt="skyscrapper image blob">
             <img src="../Images/Slider_placeholder/cytat@2x.png" alt="cytat" class="quotationMark" alt="skyscrapper image">
@@ -54,23 +62,24 @@
             <div class="text fade">There isn't only one career path. Let's do it together.</div>
             <div class="text fade">There isn't only one career path. Let's do it together.</div>
           </div>
-       
-     
+
+
         </div>
         <div style="text-align:center" class="dots">
-          <span class="dot" id="dot1"></span>
-          <span class="dot" id="dot2"></span>
-          <span class="dot" id="dot3"></span>
+          <span class="dot" id="dot1" aria-label="slide-change-dot1"></span>
+          <span class="dot" id="dot2" aria-label="slide-change-dot2"></span>
+          <span class="dot" id="dot3" aria-label="slide-change-dot3"></span>
         </div>
         <br>
-        
-        
+
+
       </section>
 
 <!-- section home end -->
-      
+
 
 <!--About project-->
+<<<<<<< HEAD
   <section class="AboutProjectSection" id="projekt" data-aos="fade-up">
     <div class="template-title-right">O projekcie</div>
     <div class="grid-item">
@@ -87,46 +96,72 @@
     </div>
     <div class="Mouse-over-it">
       <a href="#contact_form">Napisz do nas</a> <span>&#8594;</span>
+=======
+  <section class="AboutProjectSection" id="projekt" data-aos="fade-in">
+    <div class="template-title-right">O projekcie</div>
+    <div class="project-container">
+      <img id="stripes_three" class="tilt" src="../Images/Kreski/F_kreski@2x.png">
+      <div class="align-items-left">
+        <p class="project-text">
+          Platforma eQuarium pomaga w rozwoju osobistym oraz zawodowym. Upraszczamy komunikację pomiędzy pracodawcą a kandydatem przy rozmowie o staż, praktyki czy pracę. Jednak nie ograniczamy się tylko do tego. Dla zespołów posiadających biznesplany oferujemy indywidualny mentoring, pomoc w znalezieniu wsparcia finansowego oraz zaplecza technicznego i praktycznego.
+        </p>
+        <div class="Mouse-over-it projekt-button" style="width: 100%;">
+          <a href="#contact_form">Napisz do nas&#8594;</a>
+        </div>
+      </div>
+      <div class="align-items-right">
+        <img src="../Images/O_projekcie+Cele_projektu/F_o_projekcie.png" />
+      </div>
+
+>>>>>>> develop
     </div>
   </section>
 <!--About project-->
-      
+
 
 <!--Goals of the project-->
+<<<<<<< HEAD
   <section class="GoalOfTheProjectSection" id="goal" data-aos="fade-up">
+=======
+  <section class="GoalOfTheProjectSection" id="goal" data-aos="fade-in">
+>>>>>>> develop
     <div class="template-title">Cele projektu</div>
-    <div class="grid-container">
-      <div class="grid-item"> 
+    <div class="goal-container">
+      <div class="goal-goals">
+        <div class="goal">
+          <p class="goal-headline">Kontakt</p>
+          <p>
+            Ułatwienie kontaktu kandydata z pracodawcą
+          </p>
+        </div>
+        <div class="goal">
+          <p class="goal-headline">Pomoc</p>
+          <p>
+            Pomoc dla studentów, którzy są gotowi do działań
+          </p>
+        </div>
+        <div class="goal">
+          <p class="goal-headline">Informacja</p>
+          <p>
+            Gromadzenie informacji na temat wydarzeń i szkoleń
+          </p>
+        </div>
+      </div>
+      <div class="goal-image">
         <img srcset="..\Images\O_projekcie+Cele_projektu\mobile_cele.png 273w,
-                    ../Images/O_projekcie+Cele_projektu/F_cele_projektu.png 420w" 
+                    ../Images/O_projekcie+Cele_projektu/F_cele_projektu.png 420w"
               sizes="(max-width: 767px) 273px,
                       420px"
               src="../Images/O_projekcie+Cele_projektu/F_cele_projektu.png" alt="dartboard"/>
       </div>
-      <div class="grid-item">
-        <p>
-          <span class="goal-headline">Kontakt</span> </br>
-          Ułatwienie kontaktu kandydata z pracodawcą 
-        </p>
-      </div>
-      <div class="grid-item">
-        <p>
-          <span class="goal-headline">Pomoc</span> <br>
-          Pomoc dla studentów, którzy są gotowi do działań 
-        </p>
-      </div>
-      <div class="grid-item">
-        <p>
-          <span class="goal-headline">Informacja</span> <br>
-          Gromadzenie informacji na temat wydarzeń i szkoleń
-        </p>
-      </div>
     </div>
+    <img id="dots" class="blur tilt-reverse" src="../Images/Kreski/F_kreski_bok_aktualnosci.svg">
   </section>
 <!--Goals of the project-->
 
 
 <!--For mentors and students-->
+<<<<<<< HEAD
   <section class="MentorsAndStudents" id="mentors" data-aos="fade-up">
     <div class="template-title-right">Mentorzy</div>
     <div> 
@@ -139,20 +174,34 @@
     </div>
     <div class="Mouse-over-it"> 
       <a class="sign-in-redirect-btn" href="#contact_form">Zgłoś się </a> <span>&#8594;</span>
+=======
+<section id="mentors-students" data-aos="fade-in">
+  <div class="mentors" id="mentors">
+      <div class="template-title-right">Mentorzy</div>
+      <div class="mentors-container">
+      <div class="align-items-right">
+        <ul class="mentors-list">
+          <li>Uzyskanie certyfikatu ukończenia programu mentoringowego</li>
+          <li>Działania CRS i employer branding</li>
+          <li>Współpraca ze środowiskiem naukowym</li>
+          <li>Nawiązywanie nowych kontaktów</li>
+        </ul>
+      </div>
+      <div class="Mouse-over-it">
+        <a class="mentors-contact-button" href="#contact_form">Zgłoś się <span>&#8594;</span></a>
+      </div>
+>>>>>>> develop
     </div>
+  </div>
+  <section id="students" class="students">
     <div class="template-title">Studenci</div>
+    <div class="students-container">
+    <div class="align-items-left">
     <div>
-      <p>
-        eQuarium to platforma dla studentów, którzy pragną, już podczas studiów, rozpocząć swoją karierę.
-      </p>
-      <p>
-        Nie tylko ułatwiamy kontakt z pracodawcami, ale także pomagamy w rozwoju własnego biznesplanu.  
-      </p>
-    </div>
-    <div>
-      <hr>
-      <p>
+        eQuarium to platforma dla studentów, którzy pragną, już podczas studiów, rozpocząć swoją karierę. Nie tylko ułatwiamy kontakt z pracodawcami, ale także pomagamy w rozwoju własnego biznesplanu.
+        <hr class="horizontal-line-students">
         Jeżeli jesteś osobą, która pragnie ciągle się rozwijać, eQuarium jest dla ciebie idealnym miejscem.
+<<<<<<< HEAD
       </p>
     </div>
     <div class="Mouse-over-it">
@@ -164,19 +213,37 @@
             sizes="(max-width: 1024px) 142px,
                     282px"
               src="../Images/Mentorzy/F_mentorzy.png" alt="two faces vector graphic"/>
+=======
+>>>>>>> develop
     </div>
+  </div>
+  <div class="Mouse-over-it">
+    <a class="mentors-contact-button" href="#contact_form">Dołącz do nas <span>&#8594;</span></a>
+</div>
+  <div class="students-img-desktop align-items-left">
+    <img src="../Images/Mentorzy/F_mentorzy.png" />
+  </div>
+  <div class="students-img-mobile align-items-left">
+    <img src="../Images/Mentorzy/mobile_mentorzy.png" />
+  </div>
+</div>
+  </section>
   </section>
 <!--For mentors and students-->
 
 
 <!-- section meet us -->
 
+<<<<<<< HEAD
       <section id="meet_us" data-aos="fade-up">
+=======
+      <section id="meet_us" data-aos="fade-in">
+>>>>>>> develop
         <div class="template-title-right" id="template-title-right">Poznaj nas</div>
         <div id="meet_us_grid">
           <div class="meet_us_person">
             <img src="../Images/Poznaj nas/IMG_8293.jpeg" alt="handsome man jpg" class="meet_us_img_bottom" />
-            
+
             <p class="meet_us_text1">Anna Biłyj</p>
             <p class="meet_us_text2">External Relations</p>
             <a href="https://www.facebook.com/profile.php?id=100000790081909" target="_blank" class="meet_us_messenger"><img src="../Images/Ikony/messanger.svg" alt="messenger icon"></img></a>
@@ -184,7 +251,7 @@
           </div>
           <div class="meet_us_person">
             <img src="../Images/Poznaj nas/IMG_8274 jasniejsze tlo.jpeg" alt="handsome man jpg" class="meet_us_img_bottom" />
-            
+
             <p class="meet_us_text1">Michał Trzpis</p>
             <p class="meet_us_text2">CEO</p>
             <a href="https://www.facebook.com/mtrzpis" target="_blank" class="meet_us_messenger" href="www.google.com"><img src="../Images/Ikony/messanger.svg" alt="messenger icon"></img></a>
@@ -192,7 +259,7 @@
           </div>
           <div class="meet_us_person">
             <img src="../Images/Poznaj nas/IMG_8338.jpeg" alt="handsome man jpg" class="meet_us_img_bottom" />
-            
+
             <p class="meet_us_text1">Kacper Floryn</p>
             <p class="meet_us_text2">Social Media Specialist</p>
             <a href="https://www.facebook.com/Florek.Pomidorekk" target="_blank" class="meet_us_messenger"><img src="../Images/Ikony/messanger.svg" alt="messenger icon"></img></a>
@@ -200,7 +267,7 @@
           </div>
           <div class="meet_us_person">
             <img src="../Images/Poznaj nas/IMG_8832-ver3.jpeg" alt="handsome man jpg" class="meet_us_img_bottom" />
-            
+
             <p class="meet_us_text1">Katarzyna Kulińska</p>
             <p class="meet_us_text2">Marketing & Social Media</p>
             <a href="https://www.facebook.com/katarzyna.kulinska99" target="_blank" class="meet_us_messenger"><img src="../Images/Ikony/messanger.svg" alt="messenger icon"></img></a>
@@ -208,7 +275,7 @@
           </div>
           <div class="meet_us_person">
             <img src="../Images/Poznaj nas/IMG_8837.jpeg" alt="handsome man jpg" class="meet_us_img_bottom" />
-            
+
             <p class="meet_us_text1">Mateusz Janowski</p>
             <p class="meet_us_text2">Project Manager</p>
             <a href="https://www.facebook.com/mjanows" target="_blank" class="meet_us_messenger"><img src="../Images/Ikony/messanger.svg" alt="messenger icon"></img></a>
@@ -216,7 +283,7 @@
           </div>
           <div class="meet_us_person">
             <img src="../Images/Poznaj nas/IMG_8849.jpeg" alt="handsome man jpg" class="meet_us_img_bottom" />
-            
+
             <p class="meet_us_text1">Vladyslav Denysiuk</p>
             <p class="meet_us_text2">IT Specialist</p>
             <a href="https://www.facebook.com/vladd.denysiuk" target="_blank" class="meet_us_messenger"><img src="../Images/Ikony/messanger.svg" alt="messenger icon"></img></a>
@@ -225,7 +292,11 @@
         </div>
       </section>
 
+<<<<<<< HEAD
       <section id="partners" data-aos="fade-up">
+=======
+      <section id="partners" data-aos="fade-in">
+>>>>>>> develop
         <div class="template-title-right">Partnerzy</div>
         <div class="partners-container">
           <figure>
@@ -243,21 +314,48 @@
             <a href="https://blockchainhouse.co/" target="_blank"><img src="../Images/partnerzy/logo-update-2.c13212a.png" alt="blockchain house logo"></a>
           </figure>
         </div>
-        
+
       </section>
 
 
 <!-- section contact form -->
 
+<<<<<<< HEAD
 <section id="contact_form" data-aos="fade-up">
   <div class="template-title-right">Kontakt</div>
   <div id="form_container">
+=======
+<section id="contact_form" data-aos="fade-in">
+  <div class="template-title-right">Kontakt</div>
+  <div id="form_container">
+    <!-- <div id="form_child_left">
+      <form id="form">
+
+        <div id="errorMsg"></div>
+        <div id="successMsg"></div>
+        <label for="MERGE2">Imię i nazwisko</label>
+        <input name = "imię i nazwisko"  type="text" class="input"  id="name" >
+
+        <label for="MERGE0">Email</label>
+        <input name = "email" id ="email" type="text" class="input"  autocapitalize="off" autocorrect="off">
+
+        <label for="MERGE4">Telefon</label>
+        <input name = "telefon" id ="phone" type="text" class="input" >
+
+        <label for="MERGE1">Wiadomość</label>
+        <input name = "wiadomość" id ="msg" type="text" class="input" >
+
+        <input id ="submit" name="submit" type="submit" value="Wyślij⟶">
+
+      </form>
+    </div> -->
+>>>>>>> develop
     <!-- Begin Mailchimp Signup Form -->
     <div id="form_child_left">
       <form action="https://equarium.us20.list-manage.com/subscribe/post?u=ee1209090276718eaccecd69f&amp;id=9d7f544068"
         method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
         novalidate>
-        
+
           <div id="errorMsg" style="display: grid;"></div>
           <div id="successMsg"></div>
           <div class="mc-field-group">
@@ -278,23 +376,28 @@
             <input type="text" value="" name="MSG" class="" id="msg">
           </div>
           <div class="privacy-policy">
+<<<<<<< HEAD
             Klikając "Wyślij" wyrażasz zgodę na przetwarzanie twoich danych przez organizację Equarium,
             w celach marketingowych i kontaktu. Po więcej szczegółów zajrzyj do <a href="/dist/privacy-policy.html" target="_blank" id="privacy-policy">Polityka Prywatności</a>
+=======
+            Klikając "Wyślij" wyrażasz zgodę na przetwarzanie twoich danych przez organizację Equarium, w celach marketingowych i kontaktu. Po więcej szczegółów zajrzyj do <a href="/dist/privacy-policy.html" target="_blank" id="privacy-policy">Polityki Prywatności</a>.
+>>>>>>> develop
           </div>
-          
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
               name="b_ee1209090276718eaccecd69f_9d7f544068" tabindex="-1" value=""></div>
-          <div class="clear"><input type="submit" value="Wyślij⟶" name="subscribe" id="mc-embedded-subscribe"
-              class="button"></div>
-       
+          <div class="mouse-over-contact-btn contact-button">
+            <button type="submit" 
+            class="contact-submit-button" name="subscribe" 
+            id="mc-embedded-subscribe">Wyślij <span>&#8594;</span></button>
+          </div>
       </form>
     </div>
-    
-    
+
+
     <!--End mc_embed_signup-->
     <div id="form_child_right">
-      <img src="../Images/Kontakt/F_kontakt@2x.png" />
+      <img class="blur tilt" src="../Images/Kontakt/F_kontakt@2x.png" />
       <i class="fas fa-map-marker-alt"></i>
       <p>
         Komandorska 118/120 <br />
@@ -306,14 +409,44 @@
         kontakt@equrium.pl
       </p>
     </div>
-    
+
   </div>
 </section>
 
 <!-- section contact form -->
 
+<<<<<<< HEAD
     </div>
     <script src="main.js"></script>
     
+=======
+<!--
+       <footer>
+        <nav class = "footer">
+          <ul class="footer-links">
+            <li class="footer-item"><a href="#">Home</a></li>
+            <li class="footer-item"><a href="#">Aktualności</a></li>
+            <li class="footer-item"><a href="#">Współpraca</a></li>
+            <li class="footer-item"><a href="#">Zespół</a></li>
+            <li class="footer-item"><a href="#">Projekt</a></li>
+            <li class="footer-item"><a href="#">Kontakt</a></li>
+          </ul>
+        </nav>
+      </footer>
+       -->
+    </div>
+    <script src="main.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140842219-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140842219-1');
+</script>
+
+>>>>>>> develop
   </body>
 </html>
