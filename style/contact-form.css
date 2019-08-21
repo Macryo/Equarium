@@ -7,13 +7,20 @@
 }
 
 .privacy-policy {
-    font-size: 11px;
+    text-align: justify;
+    font-size: var(--font-size-xs);
     color: grey;
 }
 
 #privacy-policy{
     color: var(--blue);
     text-decoration: none;
+}
+
+.contact-button {
+    width: 80%;
+    position: relative;
+    text-align: center;
 }
 
 #form_container{
@@ -23,7 +30,14 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 
-    
+}
+
+.contact-submit-button{
+    text-align: center;
+    font-family: var(--noto-font);
+    font-size: var(--font-size-s);
+    background:none;
+    border:0;
 }
 
 /* left form child style */
