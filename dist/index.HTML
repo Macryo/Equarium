@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>eQuarium</title>
+    <meta charset="UTF-8">
     <meta name="author" content="Maciej Hnat, Marcin Głowacki, Maciej Rychlik">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../Images/header_footer/f_mentorzy_CsN_icon.ico" />
@@ -22,20 +23,18 @@
   </head>
   <body>
     <div class = "main-container">
+
+
 <!-- header -->
+
       <header>
-        <img srcset="
-        ../Images/header_footer/logo_white_mobile.png 100w,
-        ../Images/header_footer/logo_mobile@4x.png 800w"
-        src="../Images/header_footer/logo_mobile@4x.png"
-        class="logo" id="logo" alt="logo_equarium">
-        
+        <div class="logo" id="logo"></div>
         <nav id="nav" class="">
           <img src="../Images/header_footer/mobile_face_right.svg" class="hidden face-left" alt="" id="face-left">
           <ul>
             <li><a class="hoverNav menu_child" href="#home">HOME</a></li>
             <li><a class="hoverNav menu_child" href="#goal">PROJEKT</a></li>
-            <li><a class="hoverNav menu_child" href="#mentors">WSPÓŁPRACA</a></li>
+            <li><a class="hoverNav menu_child" href="#mentors-students">WSPÓŁPRACA</a></li>
             <li><a class="hoverNav menu_child" href="#meet_us">ZESPÓŁ</a></li>
             <li><a class="hoverNav menu_child" href="#partners">PARTNERZY</a></li>
             <li><a class="hoverNav menu_child" href="#contact_form">KONTAKT</a></li>
@@ -63,9 +62,9 @@
 
         </div>
         <div style="text-align:center" class="dots">
-          <span class="dot" id="dot1"></span>
-          <span class="dot" id="dot2"></span>
-          <span class="dot" id="dot3"></span>
+          <span class="dot" id="dot1" aria-label="slide-change-dot1"></span>
+          <span class="dot" id="dot2" aria-label="slide-change-dot2"></span>
+          <span class="dot" id="dot3" aria-label="slide-change-dot3"></span>
         </div>
         <br>
 
@@ -79,13 +78,10 @@
   <section class="AboutProjectSection" id="projekt" data-aos="fade-in">
     <div class="template-title-right">O projekcie</div>
     <div class="project-container">
-      <img id="stripes_three" src="../Images/Kreski/F_kreski@2x.png">
+      <img id="stripes_three" class="tilt" src="../Images/Kreski/F_kreski@2x.png">
       <div class="align-items-left">
         <p class="project-text">
-          Platforma eQuarium pomaga w rozwoju osobistym oraz zawodowym. Upraszczamy komunikację pomiędzy pracodawcą a
-          kandydatem przy rozmowie o staż, praktyki czy pracę. Jednak nie ograniczamy się tylko do tego. Dla zespołów
-          posiadających biznesplany oferujemy indywidualny mentoring, pomoc w znalezieniu wsparcia finansowego oraz
-          zaplecza technicznego i praktycznego.
+          Platforma eQuarium pomaga w rozwoju osobistym oraz zawodowym. Upraszczamy komunikację pomiędzy pracodawcą a kandydatem przy rozmowie o staż, praktyki czy pracę. Jednak nie ograniczamy się tylko do tego. Dla zespołów posiadających biznesplany oferujemy indywidualny mentoring, pomoc w znalezieniu wsparcia finansowego oraz zaplecza technicznego i praktycznego.
         </p>
         <div class="Mouse-over-it projekt-button">
           <a href="#contact_form">Napisz do nas&#8594;</a>
@@ -132,6 +128,7 @@
               src="../Images/O_projekcie+Cele_projektu/F_cele_projektu.png" />
       </div>
     </div>
+    <img id="dots" class="blur tilt-reverse" src="../Images/Kreski/F_kreski_bok_aktualnosci.svg">
   </section>
 <!--Goals of the project-->
 
@@ -159,8 +156,7 @@
     <div class="students-container">
     <div class="align-items-left">
     <div>
-        eQuarium to platforma dla studentów, którzy pragną, już podczas studiów, rozpocząć swoją karierę.
-        Nie tylko ułatwiamy kontakt z pracodawcami, ale także pomagamy w rozwoju własnego biznesplanu.
+        eQuarium to platforma dla studentów, którzy pragną, już podczas studiów, rozpocząć swoją karierę. Nie tylko ułatwiamy kontakt z pracodawcami, ale także pomagamy w rozwoju własnego biznesplanu.
         <hr class="horizontal-line-students">
         Jeżeli jesteś osobą, która pragnie ciągle się rozwijać, eQuarium jest dla ciebie idealnym miejscem.
     </div>
@@ -311,14 +307,15 @@
           </div>
           <div class="privacy-policy">
             Klikając "Wyślij" wyrażasz zgodę na przetwarzanie twoich danych przez organizację Equarium,
-            w celach marketingowych i kontaktu. Po więcej szczegułów zajrzyj do <a href="/dist/privacy-policy.html" target="_blank" id="privacy-policy">Polityka Prywatności</a>
+            w celach marketingowych i kontaktu. Po więcej szczegółów zajrzyj do <a href="/dist/privacy-policy.html" target="_blank" id="privacy-policy">Polityka Prywatności</a>
           </div>
 
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
               name="b_ee1209090276718eaccecd69f_9d7f544068" tabindex="-1" value=""></div>
-          <div class="clear"><input type="submit" value="Wyślij⟶" name="subscribe" id="mc-embedded-subscribe"
-              class="button"></div>
+          <div class="Mouse-over-it projekt-button">
+            <input type="submit" value="Wyślij⟶" name="subscribe" id="mc-embedded-subscribe">
+          </div>
 
       </form>
     </div>
@@ -326,7 +323,7 @@
 
     <!--End mc_embed_signup-->
     <div id="form_child_right">
-      <img src="../Images/Kontakt/F_kontakt@2x.png" />
+      <img class="blur tilt" src="../Images/Kontakt/F_kontakt@2x.png" />
       <i class="fas fa-map-marker-alt"></i>
       <p>
         Komandorska 118/120 <br />

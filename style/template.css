@@ -47,6 +47,7 @@ section #home {
     min-height: 60px;
     width: 30%;
     display: flex;
+    transition: 1s;
     justify-content: center;
     align-items: center;
 }
@@ -59,6 +60,7 @@ section #home {
 }
 
 .Mouse-over-it:hover {
+    transition: 0.5s;
     background-color: var(--very-light-green);
 }
 

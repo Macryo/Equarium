@@ -90,6 +90,7 @@
 .mentors-container {
     max-width: 40%;
     align-content: end;
+    line-height: 1.5;
     align-items: end;
     margin-right: 15px;
     margin-left: auto;
@@ -98,6 +99,8 @@
 .students-container {
   max-width: 100%;
   align-content: center;
+  line-height: 1.5;
+  text-align: justify;
   margin-left: 0;
   margin-right: auto;
 }
@@ -116,7 +119,6 @@
     position: relative;
     left: 60%;
     top: -120px;
-    width: 100%;
   }
 
 

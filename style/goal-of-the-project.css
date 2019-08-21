@@ -7,7 +7,6 @@
     align-content: center;
     justify-content: center;
     position: relative;
-    margin-top: -40px;
 }
 
 .goal > p {
@@ -53,11 +52,35 @@
     margin-top: 30px;
 }
 
+#dots{
+    position: absolute;
+    height: 100%;
+    top: 230px;
+}
+
+.blur {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+ 
+.blur:hover {
+  filter: blur(1px);
+}
+
+
 @media (max-width: 1024px) {
 
   .goal-container {
       flex-direction: column;
   }
+
+  #dots{
+    height: 60%;
+    top: 200px;
+}
 
   .goal-image {
     margin-left: auto;
@@ -75,3 +98,10 @@
   ##Device = Tablets, Ipads (portrait)
   ##Screen=B/w 768px to 1024px
 */
+
+@media (max-width: 768px) {
+  #dots{
+    height: 50%;
+}
+
+}

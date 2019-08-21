@@ -113,9 +113,8 @@ header nav ul li a:hover:active:focus {
 }
 
 #logo{
-    content: url("../Images/header_footer/logo_mobile@4x.png");
+    content: url("../Images/header_footer/logo_white_mobile.svg");
 }
-
 
 }
 
@@ -124,6 +123,10 @@ header nav ul li a:hover:active:focus {
         background: white;
         flex-direction: row;
         align-items: center;
+    }
+
+    #logo{
+        content: url("../Images/header_footer/logo_mobile@4x.png");
     }
 
     nav {
