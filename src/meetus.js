@@ -23,8 +23,13 @@ function MeetUsDesktopBehavior(z) {
        try {
            
                document.getElementById("meet_us_grid").style.display = "grid";
-               document.getElementById("meetus_expand").remove();
-               document.getElementById("meetus_expand_button").remove();
+               var expand = document.getElementById("meetus_expand")
+               var expandBtn = document.getElementById("meetus_expand_button")
+               if(expand && expandBtn){
+                   expand.remove();
+                   expandBtn.remove();
+               }
+               
            
        } catch (error) {
            console.error(error);
