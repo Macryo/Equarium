@@ -42,6 +42,7 @@
     transition: 1s;
     justify-content: center;
     align-items: center;
+     background-color: var(--very-light-green);
 }
 
 .mouse-over-contact-btn a {
@@ -49,11 +50,6 @@
     color: black;
     text-decoration: none;
 
-}
-
-.mouse-over-contact-btn:hover {
-    transition: 0.5s;
-    background-color: var(--very-light-green);
 }
 
 .contact-submit-button{
