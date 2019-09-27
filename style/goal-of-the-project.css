@@ -7,7 +7,6 @@
     align-content: center;
     justify-content: center;
     position: relative;
-    overflow-x: hidden;
 }
 
 .goal > p {
