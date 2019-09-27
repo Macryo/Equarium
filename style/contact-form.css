@@ -3,7 +3,7 @@
 #contact-form{
     height: auto;
     max-height: none;
-    
+    overflow-x: hidden;
 }
 
 .privacy-policy {

@@ -5,6 +5,7 @@
     grid-template-columns: 1fr 1fr;
     margin-top: 60px;
     grid-gap: 30px;
+    overflow-x: hidden;
 }
 
 .partners-container figure img{
