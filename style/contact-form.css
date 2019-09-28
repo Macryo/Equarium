@@ -298,7 +298,7 @@
     #form_container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 3fr 2.5fr;
         
     }
 
@@ -325,7 +325,6 @@
 
     #form_child_right {
         display: flex;
-        margin-top: -150px;
         flex-direction: column;
         justify-content: center;
         font-size: var(--font-size-s);
@@ -352,6 +351,7 @@
 
         align-self: center;
         padding-left: 30px;
+        padding-bottom: 0;
     }  
     #form_child_right i {
         position: relative;
