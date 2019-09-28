@@ -8,7 +8,6 @@ header {
     position: fixed;
     z-index: 2;
     background-color: var(--dark-blue);
-    overflow-x: hidden;
 }
 .hidden{
     display: none;
