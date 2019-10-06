@@ -1,7 +1,7 @@
 ### Wykluczenie node modules
 node_modules
 
-### Wykluczenie main.js i main.js.map jako plików buildowalnych
+### Wykluczenie main.js i main.js.map jako plikï¿½w buildowalnych
 dist/*
-!dist/index.HTML
+!dist/index.html
 
